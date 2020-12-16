@@ -1,0 +1,9 @@
+.card {
+    width: 40%;
+    align-self: center;
+}
+
+.card-title {
+    font-size: 80px;
+    text-align: center;
+}
