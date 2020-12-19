@@ -23,4 +23,7 @@ function TruckCard(props) {
                 </ul>
             </div>
         </div>
+    )
 }
+
+export default TruckCard;
