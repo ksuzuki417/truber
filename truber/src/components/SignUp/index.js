@@ -15,9 +15,9 @@ function Signup(){
         <p>Password:</p>
         <input type="text" class="form-control" placeholder="Password"></input>
         <br></br>
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"></input>
+        <input type="radio" class="btn-check"></input>
         <label class="btn btn-outline-primary" for="btnradio2">Have Truck</label>
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"></input>
+        <input type="radio" class="btn-check"></input>
         <label class="btn btn-outline-primary" for="btnradio2">Needs Truck</label>
         <br></br>
         <button>Sign Up!</button>
