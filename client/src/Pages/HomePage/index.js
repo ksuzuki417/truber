@@ -7,7 +7,8 @@ import { SignUpBtn, LoginBtn } from "../../components/HPbuttons";
 function Homepage() {
 
         const history = useHistory();
-        const navigateTo = () => history.push("/signup");
+        const navigateSignup = () => history.push("/signup");
+        const navigateLogin= () => history.push("/login");
         
 
     function handleLoginBtn() {
@@ -20,8 +21,8 @@ function Homepage() {
         <h1>Welcome to TrUber!</h1>
         <br></br>
         <br></br>
-        <SignUpBtn onClick={navigateTo}/>
-        <LoginBtn onClick={handleLoginBtn}/>
+        <SignUpBtn onClick={navigateSignup}/>
+        <LoginBtn onClick={navigateLogin}/>
     </div>
         )
 }
