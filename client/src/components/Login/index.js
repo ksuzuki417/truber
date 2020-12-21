@@ -7,10 +7,14 @@ function Login() {
      
             <div className="card">
                 <div className="card-body">
-                    <header className="card-title">TrUber</header>
-                    <p class="card-text">We have the truck for you!</p>
-                    <button type="button" className="btn btn-warning">Sign Up!</button>
-                    <button type="button" className="btn btn-warning">Log In!</button>
+                    <header className="card-title">TrUber Log In</header>
+                    <p class="card-text">Email:</p>
+                    <input type="text" class="form-control" placeholder="Email"></input>
+                    <p>Password:</p>
+                    <input type="text" class="form-control" placeholder="Password"></input>
+                    <br></br>
+                    <button>Login!</button>
+
                 </div>
             </div>
       
