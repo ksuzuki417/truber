@@ -2,6 +2,7 @@ import React from "react";
 //import "../SignUp/style.css";
 import {SubmitBtn} from "../../components/Buttons";
 import InputArea from "../../components/Input";
+import { useHistory } from "react-router-dom";
 
 
 function handleSubmitChange() {
@@ -9,6 +10,10 @@ function handleSubmitChange() {
 }
 
 function Signup(){
+    const history = useHistory();
+    const navigateTruck = () => history.push("/owner");
+    const navigateClient = () => history.push("/client");
+
     return (
         <div className="container">
             <header>TrUber Sign Up</header>
@@ -23,9 +28,9 @@ function Signup(){
         <br></br>
         <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
         <input type="radio" className="btn-check" ></input>
-        <label className="btn btn-outline-primary" id="hasTruck"for="btnradio2">Have Truck</label>
+        <label className="btn btn-outline-primary" onClick={navigateTruck} id="hasTruck"for="btnradio2">Have Truck</label>
         <input type="radio" className="btn-check"></input>
-        <label className="btn btn-outline-primary" id="needsTruck" for="btnradio2">Needs Truck</label>
+        <label className="btn btn-outline-primary"  onClick={navigateClient}  id="needsTruck" for="btnradio2">Needs Truck</label>
         </div>
         <br></br>
         <SubmitBtn onChange={handleSubmitChange}/>

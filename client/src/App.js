@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./Pages/Login";
 import Signup from "./Pages/SignUp";
 import Homepage from "./Pages/HomePage";
+import Owner from "./components/Owner";
 
 
 
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route exact path={["/login"]}>
             <Login/>
+          </Route>
+          <Route exact path={["/owner"]}>
+            <Owner/>
           </Route>
           <Login/>
         </Switch>

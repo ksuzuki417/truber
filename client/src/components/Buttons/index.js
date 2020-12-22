@@ -8,6 +8,6 @@ export function SubmitBtn (props) {
 
 export function LoginBtn(props) {
     return (
-        <button {...props} className="loginBtn" style={{}}>Login</button>
+        <button {...props} className="loginBtn">Login</button>
     );
 }
