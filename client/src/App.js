@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./Pages/Login";
 import Signup from "./Pages/SignUp";
 import Homepage from "./Pages/HomePage";
+import TruckCard from "./Pages/TruckSearch";
 
 
 
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Login/>
         </Switch>
+        <Route exact path={["/search"]}>
+          <TruckCard/>
+        </Route>
       </div>
     </Router>
   );
