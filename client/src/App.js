@@ -9,6 +9,7 @@ import TruckCard from "./Pages/TruckSearch";
 
 
 
+
 function App() {
   return (
     <Router>
@@ -26,11 +27,11 @@ function App() {
           <Route exact path={["/owner"]}>
             <Owner/>
           </Route>
-          <Login/>
-        </Switch>
-        <Route exact path={["/search"]}>
+          <Route exact path={["/client"]}>
           <TruckCard/>
         </Route>
+        </Switch>
+        
       </div>
     </Router>
   );
