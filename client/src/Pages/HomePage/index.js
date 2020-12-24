@@ -10,12 +10,6 @@ function Homepage() {
         const navigateSignup = () => history.push("/signup");
         const navigateLogin= () => history.push("/login");
         
-
-    function handleLoginBtn() {
-
-    };
-
-
         return (
     <div>
         <h1>Welcome to TrUber!</h1>

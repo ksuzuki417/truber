@@ -4,8 +4,10 @@ import React from 'react';
 
 
 function Login() {
+
+
+
     return (
-     
             <div className="card">
                 <div className="card-body">
                     <header className="card-title">TrUber Log In</header>
@@ -18,7 +20,6 @@ function Login() {
 
                 </div>
             </div>
-      
     )
 }
 
