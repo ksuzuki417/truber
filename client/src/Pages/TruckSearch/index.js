@@ -21,6 +21,7 @@ function TruckCard(props) {
                         <strong>Rate:</strong> {props.rate}
                     </li>
                 </ul>
+                <button type="submit" class="btn btn-primary">Book This Truck!</button>
             </div>
         </div>
     )
