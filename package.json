@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "Truber",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "Final Project",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.3.16"
   }
 }
