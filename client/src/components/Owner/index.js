@@ -56,7 +56,9 @@ function TruckProfile() {
 			<button type="submit" class="btn btn-primary">View Booking Requests</button>
 			<div className="form-group">
 				<label>Make:</label>
+
 				<input type="text" className="form-control" id="make" onChange={handleInputChange} value={formObject.make}></input>
+
 				</div>
 			<div className="form-group">
 				<label>Model:</label>
