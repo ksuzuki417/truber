@@ -1,11 +1,17 @@
 import React from "react";
+import { useHistory, Link } from "react-router-dom";
 
-function truckInfo() {
+function TruckInfo() {
+
+  const history = useHistory();
+    const navigateBooking = () => history.push("/bookingPage");
+   
+
   return (
     <body>
       <div id="container">
         <div id="header">
-          <h1>Enter Youre truck information!</h1>
+          <h1>Enter Your truck information!</h1>
         </div>
         <div id="info">
           <div id="content">
@@ -71,10 +77,10 @@ function truckInfo() {
             class="form-control"
             placeholder="location/zip"
           ></input>
-          <p>Upload a picture of youre truck:</p>
+          <p>Upload a picture of your truck:</p>
           <input type="img" class="form-control" placeholder="post pic"></input>
           <br></br>
-          <button>Submit!</button>
+          <button onClick= {navigateBooking}>Submit!</button>
         </div>
         <div id="extra">
           <p>
@@ -85,7 +91,7 @@ function truckInfo() {
           </p>
         </div>
         <div id="footer">
-          <p>Thank you for submitting youre truck here on TrUber!!!</p>
+          <p>Thank you for submitting your truck here on TrUber!!!</p>
         </div>
       </div>
       <script type="text/javascript">
@@ -95,4 +101,4 @@ function truckInfo() {
   );
 }
 
-export default truckInfo;
+export default TruckInfo;
