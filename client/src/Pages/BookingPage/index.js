@@ -3,15 +3,17 @@ import Container from "../../components/Container/Container";
 import Wrapper from "../../components/Wrapper/Wrapper"
 import {Client} from "@googlemaps/google-maps-services-js";
 
-var places = require('places.js');
-var placesAutocomplete = places({
+function BookTruck(props) {
+
+		/*const places = require('places.js');
+		var placesAutocomplete = places({
 		appId: 'plFCXLAE3ZG5',
 		apiKey: '5095b4ad442d5c7294786a6e13299475',
 		container: document.querySelector('#address-input')
-});
+	});*/
 
+/*Google maps/ routes
 const client = new Client({});
-
 client
   .elevation({
     params: {
@@ -25,9 +27,8 @@ client
   })
   .catch((e) => {
     console.log(e.response.data.error_message);
-  });
+  });*/
 
-function BookTruck(props) {
 	return(
 		<Wrapper>
 			<Container>
