@@ -4,8 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./Pages/Login";
 import Signup from "./Pages/SignUp";
 import Homepage from "./Pages/HomePage";
-import Owner from "./components/Owner";
+//import Owner from "./components/Owner";
 import TruckCard from "./Pages/TruckSearch";
+import TruckInfo from "./Pages/Truckinfo";
+import RequestBooking from "./Pages/Booking";
 
 
 
@@ -24,8 +26,11 @@ function App() {
           <Route exact path={["/login"]}>
             <Login/>
           </Route>
-          <Route exact path={["/owner"]}>
-            <Owner/>
+          <Route exact path={["/truckInfo"]}>
+            <TruckInfo/>
+          </Route>
+          <Route exact path={["/bookingPage"]}>
+            <RequestBooking/>
           </Route>
           <Route exact path={["/client"]}>
           <TruckCard/>
