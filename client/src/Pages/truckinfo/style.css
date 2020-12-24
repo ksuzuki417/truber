@@ -1,0 +1,59 @@
+
+/*question text*/
+body {
+    color: black;
+    font: 90% Roboto, Arial, sans-serif;
+    font-weight: 300;
+    padding: 0 10px;
+    line-height: 1.8;
+}
+
+
+/*header stuff*/
+div#header h1 {
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    padding-left: 10px;
+    background: #e0e0e0;
+    color: #292929;
+}
+
+
+div#availability {
+    background: #7cb71c;
+    float: left;
+    width: 150px;
+    margin-left: -150px;
+}
+
+div#ratings {
+    background: #147FA9;
+    float: left;
+    width: 150px;
+    margin-left: -700px;
+}
+
+
+div#footer {
+    background: #42444e;
+    color: #fff;
+    padding: 20px 10px;
+    clear: left;
+    width: 100%;
+}
+
+div#container {
+    width: 700px;
+    margin: 0 auto;
+}
+
+div#info {
+    float: left;
+    width: 100%;
+}
+/*truck information*/
+div#content {
+    margin: 0 150px;
+}
