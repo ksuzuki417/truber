@@ -6,7 +6,7 @@ import Signup from "./Pages/SignUp";
 import Homepage from "./Pages/HomePage";
 //import Owner from "./components/Owner";
 import TruckCard from "./Pages/TruckSearch";
-import TruckInfo from "./Pages/Truckinfo";
+import TruckInfo from "./Pages/truckInfo";
 import RequestBooking from "./Pages/Booking";
 
 
