@@ -55,17 +55,18 @@ function BookTruck(props) {
     <div className="col-md-4">
       <div className="card-body">
         <h5 className="card-title">User Info:</h5>
-				<div class="form-group">
+				<div className="form-group">
     <label for="inputAddress">Starting Location:</label>
-    <input type="search" class="form-control" id="address-input" placeholder="1234 Main St City, ST 56789"/>
+    <input type="search" className="form-control" id="address-input" placeholder="1234 Main St City, ST 56789"/>
   </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
+  <div className="form-row">
+    <div className="form-group col-md-6">
       <label for="inputCity">Destination Location:</label>
-      <input type="search" class="form-control" id="address-input" placeholder="1234 Main St City, ST 56789"/>
+      <input type="search" className="form-control" id="address-input" placeholder="6789 Park Ln City, ST 12345"/>
     </div>
   </div>
 <h1>Map will go here </h1>
+<button type="button" className="btn btn-primary">Book Now</button>
       </div>
     </div>
   </div>
