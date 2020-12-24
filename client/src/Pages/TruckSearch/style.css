@@ -1,0 +1,9 @@
+.selector {
+    background-image: url("../../../public/images/truckbg.jpg"),linear-gradient(white, black);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  /* <- here it is */
+  
+    width: 100px;
+    height: 100px;
+  }
