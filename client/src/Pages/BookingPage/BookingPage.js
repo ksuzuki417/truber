@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "../../components/Container/Container";
 import Wrapper from "../../components/Wrapper/Wrapper"
+import {Client} from "@googlemaps/google-maps-services-js";
 
 var places = require('places.js');
 var placesAutocomplete = places({
@@ -8,6 +9,23 @@ var placesAutocomplete = places({
 		apiKey: '5095b4ad442d5c7294786a6e13299475',
 		container: document.querySelector('#address-input')
 });
+
+const client = new Client({});
+
+client
+  .elevation({
+    params: {
+      locations: [{ lat: 45, lng: -110 }],
+      key: "asdf",
+    },
+    timeout: 1000, // milliseconds
+  })
+  .then((r) => {
+    console.log(r.data.results[0].elevation);
+  })
+  .catch((e) => {
+    console.log(e.response.data.error_message);
+  });
 
 function BookTruck(props) {
 	return(
@@ -47,8 +65,8 @@ function BookTruck(props) {
       <input type="search" class="form-control" id="address-input" placeholder="1234 Main St City, ST 56789"/>
     </div>
   </div>
+<h1>Map will go here </h1>
       </div>
-
     </div>
   </div>
 </div>
