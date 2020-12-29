@@ -1,5 +1,5 @@
 {
-  "name": "Truber",
+  "name": "truber",
   "version": "1.0.0",
   "description": "Final Project",
   "main": "server.js",
@@ -26,11 +26,10 @@
     "if-env": "^1.0.4",
 
     "multiple.js": "0.0.1",
-    "places.js": "^1.19.0"
+    "places.js": "^1.19.0",
 
     "mongodb": "^3.6.3",
-    "mongoose": "^5.3.16",
-    "multiple.js": "0.0.1"
+    "mongoose": "^5.3.16"
 
   }
 }
