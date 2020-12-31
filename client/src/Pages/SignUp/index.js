@@ -1,18 +1,20 @@
 import React from "react";
 //import "../SignUp/style.css";
+
 import {SubmitBtn} from "../../components/Buttons";
+import InputArea from "../../components/HPbuttons/Input";
+
 import InputArea from "../../components/Input";
 import { useHistory } from "react-router-dom";
 
 
-function handleSubmitChange() {
 
-}
+
 
 function Signup(){
 
     const history = useHistory();
-    const navigateTruck = () => history.push("/owner");
+    const navigateTruck = () => history.push("/truckInfo");
     const navigateClient = () => history.push("/client");
 
     return (
