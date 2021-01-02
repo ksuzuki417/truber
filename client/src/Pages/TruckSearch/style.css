@@ -1,5 +1,9 @@
 body {
-  background-image: url(../TruckSearch/images/truckbg.jpg);
+  background-image: url(),linear-gradient(white, black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+
 }
 
 .selector {
