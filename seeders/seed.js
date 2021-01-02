@@ -1,51 +1,43 @@
-let mongoose = require("mongoose");
-let db = require("../models");
+const mongoose = require("mongoose");
+const db = require("../models");
 
-mongoose.connect("mongodb://localhost/Truber", {
-    useNewUrlParser: true,
-    useFindAndModify: false
-});
+mongoose.connect(
+    process.env.MONGODB_URI ||
+    "mongodb://localhost/Truber"
+);
 
-let userSeed = [
+const truberSeed = [
     {
-        name: {
-            type: String,
-            required: true,
-        },
-        email:{
-            type: String,
-            required: true,
-        },
-        password:{
-            type: String,
-            required: true,
-        },
-        make: {
-            type: String,
-            required: true
-        },
-        model: {
-            type: String,
-            required: true
-        },
-        color: {
-            type: String
-        },
-        rate: {
-            type: Number,
-            required: true
-        },
-        seats: {
-            type: Number
-        },
-        payload: {
-            type: String
-        },
-        location: {
-            type: String,
-            required: true
-        },
-        bed: {
-            type: String
-        }
+        name: "Keita",
+        email: "ksuzuki417@gmail.com",
+        password: "123456",
+        make: "Toyota",
+        model: "Tundra",
+        color: "Brown",
+        rate: 20,
+        seats: "Double Cab",
+        payload: 1520,
+        location: "Northeast SA",
+        bed: ""
+    },
+    {
+        name: "Art",
+        email: "ArtRod@gmail.com",
+        password: "123456",
+        make: "Toyota",
+        model: "Tacoma",
+        color: "Black",
+        rate: 18,
+        seats: "Double Cab",
+        payload: 1120,
+        location: "Northeast SA",
+        bed: ""
     }];
+
+    db.Truber
+        .remove({})
+        .then(() => db.Truber.collection.insertMany(truberSeed))
+        .then(data => {
+            console.error(err);
+            process.exit(1);
+        });
