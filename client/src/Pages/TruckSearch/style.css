@@ -1,3 +1,7 @@
+body {
+  background-image: url(../TruckSearch/images/truckbg.jpg);
+}
+
 .selector {
     background-image: linear-gradient(white, black);
     background-size: cover;
