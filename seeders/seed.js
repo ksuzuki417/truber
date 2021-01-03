@@ -8,33 +8,13 @@ mongoose.connect("mongodb://localhost/Truber", {
 
 let userSeed = [
     {
-        name: {
-            type: String,
-            required: true,
-        },
-        email:{
-            type: String,
-            required: true,
-        },
-        password:{
-            type: String,
-            required: true,
-        },
-        make: {
-            type: String,
-            required: true
-        },
-        model: {
-            type: String,
-            required: true
-        },
-        color: {
-            type: String
-        },
-        rate: {
-            type: Number,
-            required: true
-        },
+        name: "Kevin Serrano",
+        email: "kserrano2784@yahoo.com",
+        password:"",
+        make: "Chevrolet",
+        model: "Silverado 2500",
+        color: "Charcoal Gray",
+        rate: 20,
         seats: {
             type: Number
         },
@@ -49,3 +29,13 @@ let userSeed = [
             type: String
         }
     }];
+    db.user.deleteMany({})
+    .then(() => db.User.collection.insertMany(userSeed))
+    .then(data => {
+      console.log(data.result.n + " records inserted!");
+      process.exit(0);
+    })
+    .catch(err => {
+      console.error(err);
+      process.exit(1);
+    });
