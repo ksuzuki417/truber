@@ -5,9 +5,10 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
-    "multiple.js": "0.0.1",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
+    "google-maps-react": "^2.0.6",
+    "multiple.js": "0.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",

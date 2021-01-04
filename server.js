@@ -1,9 +1,10 @@
 const express = require("express");
-
+const app = express();
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes");
+const chatCtrl = require("./controllers/chatCtrl");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -28,6 +29,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Truber", {
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
+app.post("/createUser", chatCtrl.createNewUser);
+app.post("/confirmUser", chatCtrl.authenticate);
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

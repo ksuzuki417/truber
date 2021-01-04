@@ -6,7 +6,7 @@ import Signup from "./Pages/SignUp";
 import Homepage from "./Pages/HomePage";
 //import Owner from "./components/Owner";
 import TruckCard from "./Pages/TruckSearch";
-
+import BookTruck from "./Pages/BookingPage"
 import TruckInfo from "./Pages/Truckinfo";
 import RequestBooking from "./Pages/Booking";
 
@@ -35,6 +35,9 @@ function App() {
           <Route exact path={["/client"]}>
           <TruckCard/>
         </Route>
+				<Route exact path={["/truckprofile"]}>
+					<BookTruck/>
+				</Route>
         </Switch>
       </div>
     </Router>

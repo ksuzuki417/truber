@@ -7,6 +7,7 @@
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "seed": "node seeder/seed.js",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
@@ -23,10 +24,11 @@
     "algoliasearch": "^4.8.3",
     "axios": "^0.21.1",
     "express": "^4.16.3",
+    "google-maps-react": "^2.0.6",
     "if-env": "^1.0.4",
-    "multiple.js": "0.0.1",
-    "places.js": "^1.19.0",
     "mongodb": "^3.6.3",
-    "mongoose": "^5.3.16"
+    "mongoose": "^5.11.9",
+    "multiple.js": "0.0.1",
+    "places.js": "^1.19.0"
   }
 }

@@ -1,41 +1,55 @@
-let mongoose = require("mongoose");
-let db = require("../models");
+const mongoose = require("mongoose");
+const db = require("../models");
 
-mongoose.connect("mongodb://localhost/Truber", {
-    useNewUrlParser: true,
-    useFindAndModify: false
-});
+mongoose.connect(
+    process.env.MONGODB_URI ||
+    "mongodb://localhost/Truber"
+);
 
-let userSeed = [
+const truberSeed = [
     {
-        name: "Kevin Serrano",
-        email: "kserrano2784@yahoo.com",
-        password:"",
-        make: "Chevrolet",
-        model: "Silverado 2500",
-        color: "Charcoal Gray",
+        name: "Keita",
+        email: "ksuzuki417@gmail.com",
+        password: "123456",
+        make: "Toyota",
+        model: "Tundra",
+        color: "Brown",
         rate: 20,
-        seats: {
-            type: Number
-        },
-        payload: {
-            type: String
-        },
-        location: {
-            type: String,
-            required: true
-        },
-        bed: {
-            type: String
-        }
+        seats: "Double Cab",
+        payload: 1520,
+        location: "Northeast SA",
+        bed: "",
+        owner: true,
+        client: false
+    },
+    {
+        name: "Art",
+        email: "ArtRod@gmail.com",
+        password: "123456",
+        make: "Toyota",
+        model: "Tacoma",
+        color: "Black",
+        rate: 18,
+        seats: "Double Cab",
+        payload: 1120,
+        location: "Northeast SA",
+        bed: "",
+        owner: true,
+        client: false
+    },
+    {
+        name: "Kevin",
+        email: "kserrano2784@yahoo.com",
+        password: "123456789",
+        owner: false,
+        client: true
+        
     }];
-    db.user.deleteMany({})
-    .then(() => db.User.collection.insertMany(userSeed))
-    .then(data => {
-      console.log(data.result.n + " records inserted!");
-      process.exit(0);
-    })
-    .catch(err => {
-      console.error(err);
-      process.exit(1);
-    });
+
+    db.Truber
+        .remove({})
+        .then(() => db.Truber.collection.insertMany(truberSeed))
+        .then(data => {
+            console.error(err);
+            process.exit(1);
+        });
