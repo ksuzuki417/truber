@@ -6,6 +6,7 @@ body {
     font-weight: 300;
     padding: 0 10px;
     line-height: 1.8;
+    height: auto;
 }
 
 
@@ -22,7 +23,7 @@ div#header h1 {
 
 
 div#availability {
-    background: #7cb71c;
+    background: #a4bcc4;
     float: left;
     width: 150px;
     margin-left: -150px;
@@ -37,7 +38,7 @@ div#ratings {
 
 
 div#footer {
-    background: #42444e;
+    background: #1f222b;
     color: #fff;
     padding: 20px 10px;
     clear: left;
@@ -47,6 +48,8 @@ div#footer {
 div#container {
     width: 700px;
     margin: 0 auto;
+    height: 100%;
+    
 }
 
 div#info {
@@ -56,4 +59,5 @@ div#info {
 /*truck information*/
 div#content {
     margin: 0 150px;
+    height: 100%;
 }

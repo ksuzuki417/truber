@@ -1,5 +1,7 @@
 import React from "react";
 import { useHistory, Link } from "react-router-dom";
+import './style.css';
+
 
 function TruckInfo() {
 
@@ -77,26 +79,26 @@ function TruckInfo() {
             class="form-control"
             placeholder="location/zip"
           ></input>
-          <p>Upload a picture of your truck:</p>
-          <input type="img" class="form-control" placeholder="post pic"></input>
-          <br></br>
+          <p>Upload a picture of youre truck:</p>
+          <div class="custom-file">
+				
+				<input type="file" class="custom-file-input" id="customFile"/>
+				</div>
           <button onClick= {navigateBooking}>Submit!</button>
         </div>
-        <div id="extra">
+        <div id="info">
           <p>
-            <strong>3.Any Current listings?</strong>
+            <strong>1.Any Current listings?</strong>
           </p>
           <p>
-            <strong>3.Reviews from past rides?</strong>
+            <strong>2.Reviews from past rides?</strong>
           </p>
         </div>
         <div id="footer">
           <p>Thank you for submitting your truck here on TrUber!!!</p>
         </div>
       </div>
-      <script type="text/javascript">
-        AddFillerLink("content", "navigation", "extra")
-      </script>
+     
     </body>
   );
 }
