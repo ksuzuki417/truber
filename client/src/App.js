@@ -12,8 +12,6 @@ import TruckInfo from "./Pages/Truckinfo";
 import RequestBooking from "./Pages/Booking";
 import "./index.css";
 
-
-
 function App() {
   return (
     <>
