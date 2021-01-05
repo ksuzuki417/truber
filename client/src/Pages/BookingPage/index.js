@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import Container from "../../components/Container/Container";
 import Wrapper from "../../components/Wrapper/Wrapper"
-import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+import StartingLocation from "../../components/PlacesInput";
+import DestinationLocation from "../../components/PlacesInput2"
 
-const mapStyles = {
-	width: '50%',
-	height: '50%',
+//const { REACT_APP_API_KEY } = process.env;
+
+const containerStyle = {  
+  width: '75%',
+  height: '75%'
 };
-
+	
 export class MapContainer extends Component {
   render() {
     return (
@@ -32,32 +36,23 @@ export class MapContainer extends Component {
 		</div>
 	</div>
 </div>
-<div className="card mb-3">
-	<div className="row no-gutters">
-		<div className="col-md-4">
-			<div className="card-body">
-				<h5 className="card-title">User Info:</h5>
-				<div className="form-group">
-		<label for="inputAddress">Starting Location:</label>
-		<input type="search" className="form-control" id="address-input" placeholder="1234 Main St City, ST 56789"/>
-	</div>
-	<div className="form-row">
-		<div className="form-group col-md-6">
-			<label for="inputCity">Destination Location:</label>
-			<input type="search" className="form-control" id="address-input" placeholder="6789 Park Ln City, ST 12345"/>
-		</div>
-	</div>
+<StartingLocation></StartingLocation>
+<DestinationLocation></DestinationLocation>
+	<button type="button" className="btn btn-primary">Book Now</button>
 	<div>
-	<Map google={this.props.google} zoom={14}>
-		<Marker onClick={this.onMarkerClick}
+	<Map 
+	google={this.props.google} 
+	zoom={14}
+	containerStyle={containerStyle}
+	center={{
+		lat: 40.854885,
+		lng: -88.081807
+	}}
+	>
+		<Marker 
+		onClick={this.onMarkerClick}
 		name={'Current location'} />
-		 </Map>
-	</div>
-      
-			<button type="button" className="btn btn-primary">Book Now</button>
-				</div>
-			</div>
-		</div>
+	</Map>
 	</div>
 	</Container>
 	</Wrapper>
@@ -68,3 +63,4 @@ export class MapContainer extends Component {
 export default GoogleApiWrapper({
   apiKey: "AIzaSyAqPz3idSbe0wpPbcnCGWUv4Unj69V7LgQ"
 })(MapContainer);
+

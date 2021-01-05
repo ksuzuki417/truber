@@ -22,8 +22,12 @@
     "@googlemaps/google-maps-services-js": "^3.1.13",
     "algoliasearch": "^4.8.3",
     "axios": "^0.21.1",
+<<<<<<< HEAD
     "boostrap": "^2.0.0",
     "bootstrap": "^4.5.3",
+=======
+    "dotenv": "^8.2.0",
+>>>>>>> 823bf17e65957f113e65de501c5f77bbdd2533f8
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "mongodb": "^3.6.3",
