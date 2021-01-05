@@ -1,9 +1,9 @@
-const db = require("../models");
-const bcrypt= require("bcryptjs");
-const express = require("express");
-const User = require("../models/user");
-const router = express.Router();
+// const db = require("../models");
+// const bcrypt= require("bcryptjs");
+// const express = require("express");
+// const User = require("../models/user");
+// const router = express.Router();
 
-module.exports = {
-  findOne: function(req,res) {}
-}
+// module.exports = {
+//   //findOne: function(req,res) {}
+// }

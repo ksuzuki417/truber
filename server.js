@@ -1,37 +1,44 @@
 const express = require("express");
-const app = express();
-const PORT = process.env.PORT || 3001;
-const app = express();
 const mongoose = require("mongoose");
-const routes = require("./routes");
-const chatCtrl = require("./controllers/chatCtrl");
+const app = express();
+const bodyParser = require("body-parser");
+const passport = require("passport");
 
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
-//Define all routes being used
-app.use(routes);
+mongoose
+  .connect(
+    'mongodb://localhost/Truber',
+    { useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false }
+  )
+
+  require("./models/user");
+const users = require("./routes/users");
+const port = process.env.PORT || 3001;
+// Bodyparser middleware
+app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
+
+// DB Config
+//const db = require("./config/keys").mongoURI;
+// Connect to MongoDB
+
+// Passport middleware
+app.use(passport.initialize());
+// Passport config
+//require("./config/passport")(passport);
+// Routes
+app.use("/api/users", users);
 
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Truber", { 
-  useNewUrlParser: true,  
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false});
 
+  // .then(() => console.log("MongoDB successfully connected"))
+  // .catch(err => console.log(err));
 
-// Send every other request to the React app
-// Define any API routes before this runs
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-app.post("/createUser", chatCtrl.createNewUser);
-app.post("/confirmUser", chatCtrl.authenticate);
-
-app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-});
+  
+app.listen(port, () => console.log(`Server up and running on port ${port} !`));

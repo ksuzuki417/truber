@@ -31,10 +31,10 @@ confimation (event) {
                     <input type="text" ref = {node => this.loginName = node} class="form-control" placeholder="Email"></input>
                     <p>Password:</p>
                     <input type="text" ref = {node => this.loginPassword = node} class="form-control" placeholder="Password"></input>
-                    <input type= "submit" value= "Submit"/>
+                    <input type= "submit" value= "Login!"/>
                     <br></br>
                     </form>
-                    <button onClick= {this.props.nextStep}>Login!</button>
+                    
 
                 </div>
             </div>
