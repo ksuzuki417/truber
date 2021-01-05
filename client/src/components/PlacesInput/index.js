@@ -3,24 +3,26 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from 'react-places-autocomplete';
- 
+
+var startingLocation = [];
+
 class StartingLocation extends React.Component {
   constructor(props) {
     super(props);
     this.state = { address: '' };
   }
- 
+
   handleChange = address => {
     this.setState({ address });
   };
- 
+
   handleSelect = address => {
     geocodeByAddress(address)
-      .then(results => getLatLng(results[0]))
-      .then(latLng => console.log('Success', latLng))
-      .catch(error => console.error('Error', error));
-  };
- 
+		.then(results => getLatLng(results[0]))
+		.then(latLng => console.log('Starting Location:', latLng))
+		.catch(error => console.error('Error', error));
+	};
+	
   render() {
     return (
       <PlacesAutocomplete

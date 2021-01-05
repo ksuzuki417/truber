@@ -24,23 +24,33 @@ export class MapContainer extends Component {
 		</div>
 		<div className="col-md-6">
 			<div className="card-body">
-				<h5 className="card-title">Owner Info:</h5>
-				<p className="card-text">Make:</p>
-				<p className="card-text">Model:</p>
-				<p className="card-text">Color:</p>
-				<p className="card-text">Payload:</p>
-				<p className="card-text">Bed Type:</p>
-				<p className="card-text">Number of Seats:</p>
-				<p className="card-text">Rate:</p>
+				<h5 className="card-title">Owner Info:{this.props.owner}</h5>
+				<p className="card-text">Make:{this.props.make}</p>
+				<p className="card-text">Model:{this.props.model}</p>
+				<p className="card-text">Color:{this.props.color}</p>
+				<p className="card-text">Payload:{this.props.payload}</p>
+				<p className="card-text">Bed Type:{this.props.bed}</p>
+				<p className="card-text">Number of Seats:{this.props.seats}</p>
+				<p className="card-text">Rate:{this.props.rate}</p>
 			</div>
 		</div>
 	</div>
 </div>
-<StartingLocation></StartingLocation>
+<div className="card mb-3">
+	<div className="row no-gutters">
+		<div className="col-md-6">
+		<div className="card-body">
+		<StartingLocation></StartingLocation>
 <DestinationLocation></DestinationLocation>
-	<button type="button" className="btn btn-primary">Book Now</button>
+<button type="button" className="btn btn-primary">Book Now</button>
+		</div>
+		</div>
+		</div>
+		</div>
+
+	
 	<div>
-	<Map 
+		<Map 
 	google={this.props.google} 
 	zoom={14}
 	containerStyle={containerStyle}
@@ -53,7 +63,7 @@ export class MapContainer extends Component {
 		onClick={this.onMarkerClick}
 		name={'Current location'} />
 	</Map>
-	</div>
+		</div>
 	</Container>
 	</Wrapper>
     );

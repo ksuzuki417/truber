@@ -23,7 +23,11 @@ const truberSchema = new Schema({
 		payload: {
 			type: String
 		},
-		location: {
+		startingLocation: {
+			type: String,
+			required: true
+		},
+		destinationLocation: {
 			type: String,
 			required: true
 		},
