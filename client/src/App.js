@@ -1,6 +1,4 @@
-import './App.css';
-import {BrowserRouter as Router,Route} from "react-router-dom";
-import Login from "./components/Login";
+çimport './App.css';
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./Pages/Login";
@@ -11,8 +9,6 @@ import TruckCard from "./Pages/TruckSearch";
 import BookTruck from "./Pages/BookingPage"
 import TruckInfo from "./Pages/truckinfo";
 import RequestBooking from "./Pages/Booking";
-
-
 
 function App() {
   return (
