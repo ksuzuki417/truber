@@ -1,15 +1,8 @@
 import React from "react";
 //import "../SignUp/style.css";
-
-//import {SubmitBtn} from "../../components/Buttons";
-//import InputArea from "../../components/HPbuttons/Input";
-
-//import InputArea from "../../components/Input";
+import {SubmitBtn} from "../../components/Buttons";
+import InputArea from "../../components/HPbuttons/Input";
 import { useHistory } from "react-router-dom";
-
-
-
-
 
 function Signup(){
 

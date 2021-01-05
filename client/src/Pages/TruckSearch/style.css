@@ -1,5 +1,9 @@
+body {
+  background-image: url(../TruckSearch/images/truckbg.jpg);
+}
+
 .selector {
-    background-image: url("../../../public/images/truckbg.jpg"),linear-gradient(white, black);
+    background-image: linear-gradient(white, black);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;  /* <- here it is */

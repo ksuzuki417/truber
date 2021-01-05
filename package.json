@@ -1,5 +1,5 @@
 {
-  "name": "Truber",
+  "name": "truber",
   "version": "1.0.0",
   "description": "Final Project",
   "main": "server.js",
@@ -22,10 +22,13 @@
     "@googlemaps/google-maps-services-js": "^3.1.13",
     "algoliasearch": "^4.8.3",
     "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
-    "places.js": "^1.19.0",
     "mongodb": "^3.6.3",
-    "mongoose": "^5.3.16"
+    "mongoose": "^5.11.9",
+    "multiple.js": "0.0.1",
+    "places.js": "^1.19.0",
+    "react-places-autocomplete": "^7.3.0"
   }
 }
