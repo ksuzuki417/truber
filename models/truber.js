@@ -17,19 +17,19 @@ const truberSchema = new Schema({
         type: Number,
         required: true
 		},
-		seats: {
-			type: Number
-		},
-		payload: {
-			type: String
-		},
-		location: {
-			type: String,
-			required: true
-		},
-		bed: {
-			type: String
-		}
+	seats: {
+		type: Number
+	},
+	payload: {
+		type: String
+	},
+	location: {
+		type: String,
+		required: true
+	},
+	bed: {
+		type: String
+	}
 });
 
 const Truber = mongoose.model("Truber", truberSchema);

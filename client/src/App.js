@@ -6,8 +6,8 @@ import Signup from "./Pages/SignUp";
 import Homepage from "./Pages/HomePage";
 //import Owner from "./components/Owner";
 import TruckCard from "./Pages/TruckSearch";
-import BookTruck from "./Pages/BookingPage"
-import TruckInfo from "./Pages/truckinfo";
+import BookTruck from "./Pages/BookingPage";
+import TruckInfo from "./Pages/Truckinfo";
 import RequestBooking from "./Pages/Booking";
 
 

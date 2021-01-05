@@ -1,26 +1,39 @@
 // Dependencies
 const bcrypt= require("bcryptjs");
 const mongoose = require("mongoose");
+const SALT_WORK_FACTOR = 10;
 //const { model } = require("./truber");
 const Schema = mongoose.Schema;
 
-
     const userSchema = new Schema({
             name: { type: String, required: true},
-            email: {type: String, required: true},
+            email: {type: String, required: true, unique: true},
             password: {type: String, required: true},
     });
 
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
-    userSchema.prototype.validPassword = function(password) {
-        return bcrypt.compareSync(password, this.password);
-    };
+    userSchema.pre("save", function(next) {
+      const user = this;
+      if (!user.isModified("password")) return next();
+      bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
+        if (err) return next(err);
+
+        bcrypt.hash(user.password, salt, function(err, hash){
+          if(err) return next(err);
+          user.password = hash;
+          next();
+        });
+      });
+    });
   // Hooks are automatic methods that run during various phases of the User Model lifecycle
   // In this case, before a User is created, we will automatically hash their password
-    userSchema.addHook("beforeCreate", function(user) {
-        user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-    });
+    userSchema.methods.comparePassword = function(candidatePassword, cb) {
+      bcrypt.compare(candidatePassword, this.password, function(err, isMatch){
+        if (err) return cb(err);
+        cb(null, isMatch);
+      });
+    };  
 
-    const Users = mongoose.model("User", userSchema)
+    Users = mongoose.model("User", userSchema)
 
     module.exports= Users;
