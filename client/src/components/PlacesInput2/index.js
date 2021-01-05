@@ -17,8 +17,8 @@ class DestinationLocation extends React.Component {
   handleSelect = address => {
     geocodeByAddress(address)
       .then(results => getLatLng(results[0]))
-      .then(latLng => console.log('Success', latLng))
-      .catch(error => console.error('Error', error));
+      .then(latLng => console.log('Destination Location', latLng))
+      .catch(error => console.error('Destination Location Error', error));
   };
  
   render() {
