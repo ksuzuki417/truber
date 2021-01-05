@@ -2,6 +2,7 @@
 
 /*question text*/
 body {
+    margin-bottom: 250px;
     color: black;
     font: 90% Roboto, Arial, sans-serif;
     font-weight: 300;

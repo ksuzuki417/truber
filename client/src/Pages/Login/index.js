@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Loginstyle.css";
+//import "./style.css";
 //import Input from "../../components/Input";
 
 
