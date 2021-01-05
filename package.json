@@ -28,7 +28,6 @@
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.9",
     "multiple.js": "0.0.1",
-    "places.js": "^1.19.0",
-    "react-places-autocomplete": "^7.3.0"
+    "places.js": "^1.19.0"
   }
 }
