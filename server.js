@@ -1,35 +1,44 @@
 const express = require("express");
-const path = require("path");
-const PORT = process.env.PORT || 3001;
-const app = express();
 const mongoose = require("mongoose");
+const app = express();
+const bodyParser = require("body-parser");
+const passport = require("passport");
 
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+mongoose
+  .connect(
+    'mongodb://localhost/Truber',
+    { useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false }
+  )
 
-// Define API routes here
-const db = require("./models");
-//require("./routes/api-routes.js")(app);
-//require("./routes/html-routes.js")(app);
+  require("./models/user");
+const users = require("./routes/users");
+const port = process.env.PORT || 3001;
+// Bodyparser middleware
+app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Truber", { 
-  useNewUrlParser: true,  
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false});
+// DB Config
+//const db = require("./config/keys").mongoURI;
+// Connect to MongoDB
+
+// Passport middleware
+app.use(passport.initialize());
+// Passport config
+//require("./config/passport")(passport);
+// Routes
+app.use("/api/users", users);
 
 
-// Send every other request to the React app
-// Define any API routes before this runs
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
 
-app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-});
+  // .then(() => console.log("MongoDB successfully connected"))
+  // .catch(err => console.log(err));
+
+  
+app.listen(port, () => console.log(`Server up and running on port ${port} !`));

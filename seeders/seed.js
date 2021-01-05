@@ -18,7 +18,9 @@ const truberSeed = [
         seats: "Double Cab",
         payload: 1520,
         location: "Northeast SA",
-        bed: ""
+        bed: "",
+        owner: true,
+        client: false
     },
     {
         name: "Art",
@@ -31,7 +33,17 @@ const truberSeed = [
         seats: "Double Cab",
         payload: 1120,
         location: "Northeast SA",
-        bed: ""
+        bed: "",
+        owner: true,
+        client: false
+    },
+    {
+        name: "Kevin",
+        email: "kserrano2784@yahoo.com",
+        password: "123456789",
+        owner: false,
+        client: true
+        
     }];
 
     db.Truber
