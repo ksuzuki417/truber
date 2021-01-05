@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Container from "../../components/Container/Container";
 import Wrapper from "../../components/Wrapper/Wrapper"
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+import StartingLocation from "../../components/PlacesInput";
+import DestinationLocation from "../../components/PlacesInput2"
 
 //const { REACT_APP_API_KEY } = process.env;
 
@@ -34,7 +36,8 @@ export class MapContainer extends Component {
 		</div>
 	</div>
 </div>
-
+<StartingLocation></StartingLocation>
+<DestinationLocation></DestinationLocation>
 	<button type="button" className="btn btn-primary">Book Now</button>
 	<div>
 	<Map 
