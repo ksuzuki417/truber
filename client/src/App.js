@@ -10,8 +10,6 @@ import BookTruck from "./Pages/BookingPage";
 import TruckInfo from "./Pages/Truckinfo";
 import RequestBooking from "./Pages/Booking";
 
-
-
 function App() {
   return (
     <Router>
