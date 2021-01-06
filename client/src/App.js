@@ -4,41 +4,30 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./Pages/Login";
 import Signup from "./Pages/SignUp";
 import Homepage from "./Pages/HomePage";
+import Header from "./components/Header/index";
 //import Owner from "./components/Owner";
 import TruckCard from "./Pages/TruckSearch";
 import BookTruck from "./Pages/BookingPage"
-import TruckInfo from "./Pages/truckinfo";
+import TruckInfo from "./Pages/Truckinfo";
 import RequestBooking from "./Pages/Booking";
+import "./index.css";
 
 function App() {
   return (
+    <>
     <Router>
-      <div>
+     <Header/>
         <Switch>
-          <Route exact path={["/", "/homepage"]}>
-            <Homepage/>
-          </Route>
-          <Route exact path={["/signup"]}>
-            <Signup/>
-          </Route>
-          <Route exact path={["/login"]}>
-            <Login/>
-          </Route>
-          <Route exact path={["/truckInfo"]}>
-            <TruckInfo/>
-          </Route>
-          <Route exact path={["/bookingPage"]}>
-            <RequestBooking/>
-          </Route>
-          <Route exact path={["/client"]}>
-          <TruckCard/>
-        </Route>
-				<Route exact path={["/truckprofile"]}>
-					<BookTruck/>
-				</Route>
+          <Route exact path="/" component= {Homepage} />
+          <Route path="/signup" component= {Signup} />
+          <Route path="/login" component= {Login} />
+          <Route path="/truckInfo" component= {TruckInfo} />
+          <Route path="/bookingPage" component= {BookTruck} />
+          <Route path="/client" component= {TruckCard} />
+				  <Route path="/truckprofile" component= {RequestBooking} />
         </Switch>
-      </div>
     </Router>
+    </>
   );
 }
 
