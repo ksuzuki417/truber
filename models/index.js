@@ -1,4 +1,5 @@
 module.exports = {
     Truber: require("./truber"),
-    Users: require("./user")
+    User: require("./user"),
   };
+  
