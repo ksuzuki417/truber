@@ -14,20 +14,20 @@ import "./index.css";
 
 function App() {
   return (
-    <>
     <Router>
-     <Header/>
+      <Header/>
         <Switch>
-          <Route exact path="/" component= {Homepage} />
+        <Route exact path="/" component= {Homepage} />
           <Route path="/signup" component= {Signup} />
           <Route path="/login" component= {Login} />
           <Route path="/truckInfo" component= {TruckInfo} />
           <Route path="/bookingPage" component= {BookTruck} />
-          <Route path="/client" component= {TruckCard} />
-				  <Route path="/truckprofile" component= {RequestBooking} />
+          <Route exact path={["/client"]}>
+          <TruckCard/>
+        </Route>
+				<Route path="/truckprofile" component= {RequestBooking} />
         </Switch>
     </Router>
-    </>
   );
 }
 

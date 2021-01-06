@@ -1,5 +1,8 @@
 body {
-  background-image: url(../TruckSearch/images/truckbg.jpg);
+  background-image: linear-gradient(white, lightgreen);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .selector {
