@@ -7,8 +7,8 @@ import Homepage from "./Pages/HomePage";
 import Header from "./components/Header/index";
 //import Owner from "./components/Owner";
 import TruckCard from "./Pages/TruckSearch";
-import BookTruck from "./Pages/BookingPage"
-import TruckInfo from "./Pages/Truckinfo";
+import BookingPage from "./Pages/BookingPage"
+import TruckInfo from "./Pages/truckinfo";
 import RequestBooking from "./Pages/Booking";
 import "./index.css";
 
@@ -22,7 +22,7 @@ function App() {
           <Route path="/signup" component= {Signup} />
           <Route path="/login" component= {Login} />
           <Route path="/truckInfo" component= {TruckInfo} />
-          <Route path="/bookingPage" component= {BookTruck} />
+          <Route path="/bookingPage" component= {BookingPage} />
           <Route path="/client" component= {TruckCard} />
 				  <Route path="/truckprofile" component= {RequestBooking} />
         </Switch>

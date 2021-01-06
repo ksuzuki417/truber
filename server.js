@@ -13,7 +13,7 @@ mongoose
       useFindAndModify: false }
   )
 
-  require("./models/user");
+require("./models/user");
 const users = require("./routes/users");
 const port = process.env.PORT || 3001;
 // Bodyparser middleware
