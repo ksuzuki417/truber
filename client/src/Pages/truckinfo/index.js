@@ -27,20 +27,20 @@ function TruckInfo() {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Model of youre truck?"
+                placeholder="Model of your truck?"
               ></input>
               <br></br>
               <p>Color:</p>
               <input
                 type="text"
                 className="form-control"
-                placeholder="Color of youre truck?"
+                placeholder="Color of your truck?"
               ></input>
               <p>Payload:</p>
               <input
                 type="text"
                 className="form-control"
-                placeholder="How much can youre truck carry?"
+                placeholder="How much can your truck carry?"
               ></input>
               <p>Short bed, Normal, or Extended bed:</p>
               <input
@@ -48,23 +48,23 @@ function TruckInfo() {
                 className="form-control"
                 placeholder="What is the truck bed size?"
               ></input>
-              <p>Number of avalible seats?</p>
+              <p>Number of available seats?</p>
               <input
                 type="text"
                 className="form-control"
-                placeholder="How many seats in youre truck?"
+                placeholder="How many seats in your truck?"
               ></input>
             </div>
           </div>
         </div>
         <div id="availability">
-          <p className="card-text">What is youre Rate?:</p>
+          <p className="card-text">What is your Rate?:</p>
           <input
             type="text"
             className="form-control"
             placeholder="how much?"
           ></input>
-          <p>When are you avalible</p>
+          <p>When are you available</p>
           <input
             type="text"
             className="form-control"
