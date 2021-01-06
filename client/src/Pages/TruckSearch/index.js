@@ -1,24 +1,26 @@
 import React from "react";
+import "../TruckSearch/style.css";
 
-function TruckCard(props) {
+function TruckCard(prop) {
+
     return(
         <div className="card" id="selector">
             <div className="img-container">
-                <img alt={props.name} src={props.image} />
+                <img alt={prop.name} src={prop.image} />
             </div>
             <div className="content">
                 <ul>
                     <li>
-                        <strong>Make:</strong> {props.make}
+                        <strong>Make:</strong> {prop.make}
                     </li>
                     <li>
-                        <strong>Model:</strong> {props.model}
+                        <strong>Model:</strong> {prop.model}
                     </li>
                     <li>
-                        <strong>Location:</strong> {props.location}
+                        <strong>Location:</strong> {prop.location}
                     </li>
                     <li>
-                        <strong>Rate:</strong> {props.rate}
+                        <strong>Rate:</strong> {prop.rate}
                     </li>
                 </ul>
                 <button type="submit" class="btn btn-primary">Book This Truck!</button>
