@@ -23,8 +23,8 @@ const truberSeed = [
         client: false
     },
     {
-        name: "Art",
-        email: "ArtRod@gmail.com",
+        name: "kevin",
+        email: "kevin@gmail.com",
         password: "123456",
         make: "Toyota",
         model: "Tacoma",

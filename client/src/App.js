@@ -11,27 +11,24 @@ import TruckInfo from "./Pages/Truckinfo";
 import RequestBooking from "./Pages/Booking";
 import "./index.css";
 
-
-
 function App() {
   return (
-    <>
     <Router>
-     <Header/>
+      <Header/>
         <Switch>
-          <Route exact path="/" component= {Homepage} />
+        <Route exact path="/" component= {Homepage} />
           <Route path="/signup" component= {Signup} />
           <Route path="/login" component= {Login} />
           <Route path="/truckInfo" component= {TruckInfo} />
           <Route exact path={["/client"]}>
           <TruckCard/>
-        </Route>
+          </Route>
           <Route path="/bookingPage" component= {BookTruck} />
 				  <Route path="/truckprofile" component= {RequestBooking} />
         </Switch>
     </Router>
-    </>
   );
 }
+
 
 export default App;

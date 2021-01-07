@@ -37,6 +37,7 @@
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "places.js": "^1.19.0",
+    "react-places-autocomplete": "^7.3.0",
     "validator": "^10.11.0"
   }
 }
