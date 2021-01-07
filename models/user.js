@@ -9,6 +9,10 @@ const Schema = mongoose.Schema;
             password: {type: String},
             owner: {type: Boolean},
             client: {type: Boolean},
+            truber: [{
+              type: Schema.Types.ObjectId, 
+              ref: "Truber"
+            }]
     });
   //Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
     userSchema.pre("save", function(next) {
@@ -31,5 +35,10 @@ const Schema = mongoose.Schema;
         cb(null, isMatch);
       });
     };  
-   
-    module.exports = mongoose.model("User", userSchema);
+  
+  userSchema.methods.validPassword = function( pwd ) {
+      // EXAMPLE CODE!
+      return ( this.password === pwd );
+  };
+   const User = mongoose.model("User", userSchema); 
+    module.exports = User

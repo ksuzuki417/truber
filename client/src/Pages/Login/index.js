@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from "axios";
 //import "./style.css";
 //import Input from "../../components/Input";
 
@@ -11,7 +12,7 @@ confimation (event) {
         'name': this.loginName.value,
         'password': this.loginPassword.value,
     }
-   .ajax({
+  axios({
         type: "POST",
         url: "http://localhost:3000/confirmUser",
         data: data,

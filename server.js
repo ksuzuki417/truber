@@ -1,8 +1,9 @@
 const express = require("express");
+const session = require("express-session");
 const mongoose = require("mongoose");
 const app = express();
 const bodyParser = require("body-parser");
-const passport = require("passport");
+const passport = require("./config/passport");
 const path = require("path");
 
 // Define middleware here
@@ -13,6 +14,16 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+app.use(session({
+  secret: process.env.SESSION_SECRET||"once upon a time",
+  resave: true,
+  saveUninitialized: true
+}))
+
+app.use(passport.initialize());
+
+app.use(passport.session());
+
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/Truber',
     { useNewUrlParser: true,
@@ -22,7 +33,7 @@ mongoose.connect(
 )
 
 require("./models/user");
-const users = require("./routes/users");
+const apiRoutes = require("./routes/apiRoutes");
 const port = process.env.PORT || 3001;
 // Bodyparser middleware
 
@@ -38,7 +49,7 @@ app.use(
   // Connect to MongoDB
 
   // Use apiRoutes
-app.use("/api", apiRoutes);
+
 
 // Send every request to the React app
 // Define any API routes before this runs
@@ -49,11 +60,8 @@ app.get("*", function(req, res) {
 
   // Passport middleware
   app.use(passport.initialize());
-  // Passport config
-  //require("./config/passport")(passport);
-  // Routes
-  app.use("/api/users", users);
-
+  app.use("/api", apiRoutes);
+//app.use("/api", apiRoutes);
 
 
   // .then(() => console.log("MongoDB successfully connected"))
