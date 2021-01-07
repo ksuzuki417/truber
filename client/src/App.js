@@ -8,7 +8,7 @@ import Header from "./components/Header/index";
 //import Owner from "./components/Owner";
 import TruckCard from "./Pages/TruckSearch";
 import BookingPage from "./Pages/BookingPage"
-import TruckInfo from "./Pages/truckinfo";
+import TruckInfo from "./Pages/Truckinfo";
 import RequestBooking from "./Pages/Booking";
 import "./index.css";
 
@@ -22,7 +22,9 @@ function App() {
           <Route path="/login" component= {Login} />
           <Route path="/truckInfo" component= {TruckInfo} />
           <Route path="/bookingPage" component= {BookingPage} />
-          <Route path="/client" component= {TruckCard} />
+          <Route exact path={["/client"]}>
+          <TruckCard/>
+        </Route>
 				  <Route path="/truckprofile" component= {RequestBooking} />
         </Switch>
     </Router>
