@@ -3,8 +3,8 @@ require("dotenv");
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
+const isAuthenticated = require("../config/isAuthenticated");
 //const jwt = require("jsonwebtoken");
-//const keys = require("../../config/keys");
 const userController = require("../controllers/userController");
 const trucksController = require("../controllers/trucksController");
 
@@ -14,8 +14,15 @@ const trucksController = require("../controllers/trucksController");
 // Load User model
 //const db = require("../models");
 
+
 router.post("/login", passport.authenticate("local"), (req,res) => {
     res.json(req.user)
+    console.log(isAuthenticated())
+})
+
+router.post("/logout", (req,res) => {
+    req.logout()
+    res.redirect("/")
 })
 
 router.route("/register")
