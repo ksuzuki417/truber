@@ -22,7 +22,6 @@ mongoose.connect(
 )
 
 require("./models/user");
-
 const users = require("./routes/users");
 const port = process.env.PORT || 3001;
 // Bodyparser middleware

@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
 import Container from "../../components/Container/Container";
 import Wrapper from "../../components/Wrapper/Wrapper"
-import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import StartingLocation from "../../components/PlacesInput";
 import DestinationLocation from "../../components/PlacesInput2"
-
-//const { REACT_APP_API_KEY } = process.env;
+import { Map, GoogleApiWrapper } from 'google-maps-react'
 
 const containerStyle = {  
   width: '75%',
   height: '75%'
 };
+
+class MapContainer extends Component {
+	constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+	}
+
+	handleSubmit(event) {
+		console.log("working")
+    event.preventDefault();
+	}
 	
-export class MapContainer extends Component {
-  render() {
-    return (
+	render (){
+		return(
 			<Wrapper>
 			<Container>
 			<div className="card mb-3">
@@ -40,30 +48,26 @@ export class MapContainer extends Component {
 	<div className="row no-gutters">
 		<div className="col-md-6">
 		<div className="card-body">
-		<StartingLocation></StartingLocation>
+			<form onSubmit={this.handleSubmit}>
+			<StartingLocation></StartingLocation>
 <DestinationLocation></DestinationLocation>
-<button type="button" className="btn btn-primary">Book Now</button>
+<button type="submit" value="Submit" className="btn btn-primary">Get Directions</button>
+			</form>
 		</div>
 		</div>
 		</div>
 		</div>
-
-	
-	<div>
+		<div>
 		<Map 
 	google={this.props.google} 
 	zoom={14}
 	containerStyle={containerStyle}
-	center={{
-		lat: 40.854885,
-		lng: -88.081807
-	}}
-	>
-		<Marker 
-		onClick={this.onMarkerClick}
-		name={'Current location'} />
+	initialCenter={{
+		lat: 29.4260,
+		lng: -98.4861
+	}}>
 	</Map>
-		</div>
+	</div>
 	</Container>
 	</Wrapper>
     );
@@ -73,4 +77,3 @@ export class MapContainer extends Component {
 export default GoogleApiWrapper({
   apiKey: "AIzaSyAqPz3idSbe0wpPbcnCGWUv4Unj69V7LgQ"
 })(MapContainer);
-
