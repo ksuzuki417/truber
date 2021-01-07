@@ -1,4 +1,3 @@
-
 // Dependencies
 const bcrypt= require("bcryptjs");
 const mongoose = require("mongoose");
@@ -8,6 +7,8 @@ const Schema = mongoose.Schema;
             name: { type: String},
             email: {type: String, required: false, unique: true, trim: true, index: true},
             password: {type: String},
+            owner: {type: Boolean},
+            client: {type: Boolean},
     });
   //Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
     userSchema.pre("save", function(next) {

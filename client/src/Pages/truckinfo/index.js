@@ -1,10 +1,10 @@
 import React from "react";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function TruckInfo() {
 
   const history = useHistory();
-    const navigateBooking = () => history.push("/bookingPage");
+    const navigateBooking = () => history.push("/truckprofile");
    
 
   return (

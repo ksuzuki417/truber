@@ -11,7 +11,11 @@ const userController = require("../controllers/userController");
 // Load User model
 //const db = require("../models");
 
-router.route("/register").post(userController.create)
+router.route("/register")
+.post(userController.create);
+
+router.route("/info")
+.get(userController.findAll);
 
 // @route POST api/users/register
 // @desc Register user

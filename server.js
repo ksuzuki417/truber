@@ -17,6 +17,7 @@ mongoose
 const users = require("./routes/users");
 const port = process.env.PORT || 3001;
 // Bodyparser middleware
+
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({

@@ -1,6 +1,12 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 function TruckCard(props) {
+
+    const history = useHistory();
+    const handleBookingclick = () => history.push("/bookingPage");
+    
+
     return(
         <div className="card" id="selector">
             <div className="img-container">
@@ -21,7 +27,7 @@ function TruckCard(props) {
                         <strong>Rate:</strong> {props.rate}
                     </li>
                 </ul>
-                <button type="submit" class="btn btn-primary">Book This Truck!</button>
+                <button onClick= {handleBookingclick} type="submit" class="btn btn-primary">Book This Truck!</button>
             </div>
         </div>
     )
