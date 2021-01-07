@@ -8,7 +8,7 @@ import Header from "./components/Header/index";
 //import Owner from "./components/Owner";
 import TruckCard from "./Pages/TruckSearch";
 import BookTruck from "./Pages/BookingPage"
-import TruckInfo from "./Pages/truckinfo";
+import TruckInfo from "./Pages/Truckinfo";
 import RequestBooking from "./Pages/Booking";
 import "./index.css";
 

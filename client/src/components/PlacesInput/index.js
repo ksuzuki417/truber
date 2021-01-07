@@ -1,4 +1,4 @@
-/*
+
 
 import React from 'react';
 import PlacesAutocomplete, {
@@ -71,4 +71,4 @@ class StartingLocation extends React.Component {
       
       export default StartingLocation
       
-      */
+      

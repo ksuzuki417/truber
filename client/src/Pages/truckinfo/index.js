@@ -20,20 +20,20 @@ function TruckInfo() {
 
 
 
-            <p>Location</p>
-                <InputArea type="text" placeHolder="Location?"/>
             <p>Make</p>
                 <InputArea type="text" placeHolder="Make?"/>
             <p>Model</p>
                 <InputArea type="text" placeHolder="Model?"/>
-            <p>Bed size</p>
-                <InputArea type="text" placeHolder="Bed size?"/>
+            <p>Location</p>
+                <InputArea type="text" placeHolder="Location?"/>
+            <p>Rate</p>
+                <InputArea type="text" placeHolder="Rate?"/>
+            <p>Seats</p>
+                <InputArea type="text" placeHolder="Number of Seats?"/>
             <p>Payload</p>
                 <InputArea type="text" placeHolder="Payload?"/>
-            <p>Price</p>
-                <InputArea type="text" placeHolder="Rate?"/>
-            <p>Avaliablity</p>
-                <InputArea type="text" placeHolder="When would you be contacted?"/>
+            <p>Bed</p>
+                <InputArea type="text" placeHolder="Bed size?"/>
 
                 <button onClick= {navigateBooking}>Submit!</button>
 
