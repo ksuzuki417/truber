@@ -10,7 +10,7 @@ function TruckInfo() {
   return (
    
     <div className="container">
-                <header>Enter Youre Truck Info!</header>
+                <header>Enter You're Truck Info!</header>
 
 <input type= "submit" value= "pic of truck"/>
 <input type= "submit" value= "pic of self"/>

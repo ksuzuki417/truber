@@ -8,7 +8,7 @@ function Homepage() {
         
         return (
     <div>
-        <h1>Welcome to TrUber!</h1>
+        <h1>Welcome to Trüber!</h1>
      </div>
         )
 }

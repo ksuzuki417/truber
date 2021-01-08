@@ -5,7 +5,7 @@ import AuthOptions from "../auth/AuthOptions"
 export default function Header() {
     return (
         <header id= "header">
-            <Link to ="/"><h1 className="title">TrUber</h1></Link>
+            <Link to ="/"><h1 className="title">Trüber</h1></Link>
             <AuthOptions/>
         </header>
     )
