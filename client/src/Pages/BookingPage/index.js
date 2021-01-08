@@ -3,7 +3,7 @@ import Container from "../../components/Container/Container";
 import Wrapper from "../../components/Wrapper/Wrapper"
 import StartingLocation from "../../components/PlacesInput";
 import DestinationLocation from "../../components/PlacesInput2"
-import { Map, GoogleApiWrapper } from 'google-maps-react'
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
 
 const containerStyle = {  
   width: '75%',
@@ -58,19 +58,23 @@ class MapContainer extends Component {
 		</div>
 		</div>
 		<div>
-		<Map 
+				<Map 
 	google={this.props.google} 
-	zoom={14}
+	zoom={10}
 	containerStyle={containerStyle}
-	initialCenter={{
-		lat: 29.4260,
-		lng: -98.4861
-	}}>
+	center={{
+		lat: 29.5007692, 
+		lng: -98.3946886
+		}}
+	>
+		<Marker 
+		onClick={this.onMarkerClick}
+		name={'Current location'} />
 	</Map>
 	</div>
 	</Container>
 	</Wrapper>
-    );
+		)
   }
 };
 
