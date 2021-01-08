@@ -8,6 +8,7 @@ const isAuthenticated = require("../config/isAuthenticated");
 const userController = require("../controllers/userController");
 const trucksController = require("../controllers/trucksController");
 
+
 // Load input validation
 //const validateRegisterInput = require("../../validation/register");
 //const validateLoginInput = require("../../validation/login");
@@ -35,7 +36,8 @@ router.route("/info")
 .get(userController.findAll);
 
 
-router.route("/trucks")
+router
+.route("/trucks")
 .get(trucksController.findAll)
 
 

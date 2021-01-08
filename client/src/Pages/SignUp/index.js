@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 //import "../SignUp/style.css";
 
 import InputArea from "../../components/Input";
