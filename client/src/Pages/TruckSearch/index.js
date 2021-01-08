@@ -1,47 +1,50 @@
-import React, { useEffect } from "react";
-// import axios from "axios";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import API from "../../utils/API";
-import { useStoreContext } from "../../utils/GlobalState";
-import { UPDATE_POSTS, LOADING } from "../../utils/actions";
+import API from "../../utils/API"
+import Container from "../../components/Container/Container";
+import { Card, CardItem } from "../../components/TruckCard";
 
-function TruckCard(props) {
-    
+function TruckCard() {
+
+    const [trucks, setTrucks] = useState([]);
 
     const history = useHistory();
     const handleBookingclick = () => history.push("/bookingPage");
 
-     
+    useEffect(() => {
+        loadTrucks()
+    }, [])
+
+    function loadTrucks() {
+        API.getTrucks()
+        .then(res =>
+            setTrucks(res.data)
+            )
+            .catch(err => console.log(err));
+    };
+    
 
     return(
-        <div className="card" id="selector">
-            <div className="img-container">
-                <img alt={props.name} src={props.image} />
-            </div>
-            <div className="content">
-                <ul>
-                    {state.trucks
-                    .map(truck => (
+        <Container>
+            <Card>
+                {trucks.map(truck => {
+                    return (
+                        <CardItem>
+                            <img src="..." className="card-img" alt="..."/>
+                            <strong>Make:</strong> {truck.make}
+                            <strong>Model:</strong> {truck.model}
+                            <strong>Location:</strong> {truck.location}
+                            <strong>Rate:</strong> {truck.rate}
+                        </CardItem>
+                    )
+                })}
+            </Card>
 
-                    
-                    <li key={truck.make}>
-                        <strong>Make:{truck.make}</strong> {props.make}
-                    </li>
-                    ))}
-                    <li>
-                        <strong>Model:</strong> {props.model}
-                    </li>
-                    <li>
-                        <strong>Location:</strong> {props.location}
-                    </li>
-                    <li>
-                        <strong>Rate:</strong> {props.rate}
-                    </li>
-                </ul>
-                <button onClick= {handleBookingclick} type="submit" className="btn btn-primary">Book This Truck!</button>
-            </div>
-        </div>
+
+            <button onClick= {handleBookingclick} type="submit" class="btn btn-primary">Book This Truck!</button>
+        </Container>
+        
     )
-}
+    }
 
 export default TruckCard;

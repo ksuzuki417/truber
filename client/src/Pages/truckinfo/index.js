@@ -1,9 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import InputArea from "../../components/Input";
-
-
-
+import InputArea from "../../components/Input"
 
 function TruckInfo() {
 

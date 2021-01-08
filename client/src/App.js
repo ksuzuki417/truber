@@ -7,7 +7,7 @@ import Homepage from "./Pages/HomePage";
 import Header from "./components/Header/index";
 import TruckCard from "./Pages/TruckSearch/index";
 import BookTruck from "./Pages/BookingPage";
-import TruckInfo from "./Pages/Truckinfo";
+import TruckInfo from "./Pages/TruckInfo";
 import RequestBooking from "./Pages/Booking";
 import "./index.css";
 
