@@ -42,8 +42,7 @@ const truberSeed = [
         email: "kserrano2784@yahoo.com",
         password: "123456789",
         owner: false,
-        client: true
-        
+        client: true    
     }];
 
     db.Truber
