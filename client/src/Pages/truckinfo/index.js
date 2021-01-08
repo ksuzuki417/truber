@@ -78,7 +78,7 @@ function TruckInfo() {
             placeholder="location/zip"
           ></input>
           <p>Upload a picture of your truck:</p>
-          <input type="img" class="form-control" placeholder="post pic"></input>
+          <input type="img" className="form-control" placeholder="post pic"></input>
           <br></br>
           <button onClick= {navigateBooking}>Submit!</button>
         </div>

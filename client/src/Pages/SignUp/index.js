@@ -14,13 +14,13 @@ function Signup(){
         <div className="container">
                 <header>TrUber Sign Up</header>
             <p>First Name:</p>
-                <InputArea type="text" placeHolder="First Name"/>
+                <InputArea type="text" placeholder="First Name"/>
             <p>Last Name:</p>
-                <InputArea type="text" placeHolder="Last Name"/>
+                <InputArea type="text" placeholder="Last Name"/>
             <p>Email:</p>
-                <InputArea type="text" placeHolder="Email"/>
+                <InputArea type="text" placeholder="Email"/>
             <p>Password:</p>
-                <InputArea type="password" placeHolder="Password"/>
+                <InputArea type="password" placeholder="Password"/>
             <br></br>
                 <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
             <input type="radio" className="btn-check" ></input>
