@@ -60,6 +60,7 @@ class StartingLocation extends React.Component {
             );
           })}
           </div>
+          </div>
         )}
       </PlacesAutocomplete>
 
