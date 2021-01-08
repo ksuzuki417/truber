@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import PlacesAutocomplete, {
   geocodeByAddress,
@@ -24,45 +26,46 @@ class DestinationLocation extends React.Component {
   render() {
     return (
       <PlacesAutocomplete
-        value={this.state.address}
-        onChange={this.handleChange}
-        onSelect={this.handleSelect}
+      value={this.state.address}
+      onChange={this.handleChange}
+      onSelect={this.handleSelect}
       >
-        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div>
-            <input
-              {...getInputProps({
-                placeholder: 'Destination Location',
-                className: 'location-search-input',
-              })}
-            />
-            <div className="autocomplete-dropdown-container">
-              {loading && <div>Loading...</div>}
-              {suggestions.map(suggestion => {
-                const className = suggestion.active
-                  ? 'suggestion-item--active'
-                  : 'suggestion-item';
-                // inline style for demonstration purpose
-                const style = suggestion.active
-                  ? { backgroundColor: '#fafafa', cursor: 'pointer' }
-                  : { backgroundColor: '#ffffff', cursor: 'pointer' };
-                return (
-                  <div
-                    {...getSuggestionItemProps(suggestion, {
-                      className,
-                      style,
-                    })}
-                  >
-                    <span>{suggestion.description}</span>
-                  </div>
-                );
-              })}
+      {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+        <div>
+        <input
+        {...getInputProps({
+          placeholder: 'Destination Location',
+          className: 'location-search-input',
+        })}
+        />
+        <div className="autocomplete-dropdown-container">
+        {loading && <div>Loading...</div>}
+        {suggestions.map(suggestion => {
+          const className = suggestion.active
+          ? 'suggestion-item--active'
+          : 'suggestion-item';
+          // inline style for demonstration purpose
+          const style = suggestion.active
+          ? { backgroundColor: '#fafafa', cursor: 'pointer' }
+          : { backgroundColor: '#ffffff', cursor: 'pointer' };
+          return (
+            <div
+            {...getSuggestionItemProps(suggestion, {
+              className,
+              style,
+            })}
+            >
+            <span>{suggestion.description}</span>
             </div>
+            );
+          })}
           </div>
-        )}
-      </PlacesAutocomplete>
-    );
-  }
-};
-
-export default DestinationLocation
+          </div>
+          )}
+          </PlacesAutocomplete>
+          );
+        }
+      };
+      
+      export default DestinationLocation
+    

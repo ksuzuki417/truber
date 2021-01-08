@@ -1,8 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 //import "../SignUp/style.css";
 
 import InputArea from "../../components/Input";
-import {SubmitBtn} from "../../components/Buttons";
 import { useHistory } from "react-router-dom";
 
 function Signup(){
@@ -10,8 +9,6 @@ function Signup(){
     const history = useHistory();
     const navigateTruck = () => history.push("/truckInfo");
     const navigateClient = () => history.push("/client");
-
-    
 
     return (
         <div className="container">
