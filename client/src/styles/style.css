@@ -1,0 +1,74 @@
+/*question text*/
+body {
+	margin-bottom: 250px;
+	color: black;
+	font: 90% Roboto, Arial, sans-serif;
+	font-weight: 300;
+	padding: 0px;
+	line-height: 1.8;
+	height: auto;
+}
+
+.selector {
+    background-image: linear-gradient(white, black);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  /* <- here it is */
+  
+    width: 100px;
+    height: 100px;
+  }
+
+/*header stuff*/
+div#header h1 {
+	position: relative;
+	height: 80px;
+	line-height: 80px;
+	margin: 0;
+	padding-left: 10px;
+	background: #e0e0e0;
+	color: #292929;
+}
+
+
+div#availability {
+	background: #a4bcc4;
+	float: left;
+	width: 150px;
+	margin-left: -150px;
+}
+
+div#ratings {
+	
+	background: #147FA9;
+	float: left;
+	width: 150px;
+	margin-left: -700px;
+}
+
+
+div#footer {
+	background: #1f222b;
+	color: #fff;
+	padding: 20px 10px;
+	clear: left;
+	width: 100%;
+}
+
+div#container {
+	width: 700px;
+	margin: 0 auto;
+	height: 100%;
+	
+}
+
+div#info {
+	float: left;
+	width: 100%;
+}
+/*truck information*/
+div#content {
+	
+	margin: 0 150px;
+	height: 100%;
+}

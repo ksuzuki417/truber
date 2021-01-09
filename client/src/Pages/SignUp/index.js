@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import "../SignUp/style.css";
+import "../../style.css"
 
 import InputArea from "../../components/Input";
 import { useHistory } from "react-router-dom";
