@@ -6,5 +6,11 @@ export default {
 	},
 	getTrucks: function() {
 		return axios.get("/api/trucks");
+	},		
+	registerTruber: function() {
+		return axios.post("/api/trucks");
+	},		
+	registerUser: function() {
+		return axios.get("/api/register");
 	}		
 };
