@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import API from "../../utils/API";
-import Container from "../../components/Container/Container";
 import { Card } from "../../components/TruckCard";
+import "../../styles/style.css";
+import Wrapper from "../../components/Wrapper/Wrapper";
+import Container from "../../components/Container/Container";
 
 function TruckCard() {
 
@@ -25,7 +27,8 @@ function TruckCard() {
     
 
     return(
-        <Container>
+			<Wrapper>
+				<Container>
                 {trucks.map(truck => {
                     return (            
                     <Card>
@@ -34,17 +37,12 @@ function TruckCard() {
                             <strong>Model:</strong> {truck.model}
                             <strong>Location:</strong> {truck.location}
                             <strong>Rate:</strong> {truck.rate}
-
-                        <button onClick= {handleBookingclick} type="submit" className="btn btn-primary">Book This Truck!</button>
-
-                                    </Card>
-
+														<button onClick= {handleBookingclick} type="button" class="btn btn-success">Book This Truck!</button>
+										</Card>
                     )
                 })}
-
-
         </Container>
-        
+			</Wrapper>
     )
     }
 

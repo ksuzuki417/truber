@@ -20,7 +20,7 @@ router.route("/register")
 .post(userController.create);
 
 router.route("/registerTruber")
-.post(userController.registerTruber);
+.post(trucksController.create);
 
 router.route("/info")
 .get(userController.findAll);
