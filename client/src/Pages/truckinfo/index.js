@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
 import InputArea from "../../components/Input";
 import axios from 'axios';
+import "../../styles/style.css";
+import Wrapper from "../../components/Wrapper/Wrapper";
+import Container from "../../components/Container/Container";
 
 function TruckInfo() {
 
@@ -39,18 +42,14 @@ function TruckInfo() {
     }
 
   return (
-   
-    <div className="container">
-                <header>Enter Youre Truck Info!</header>
-
-<input type= "submit" value= "pic of truck"/>
-<input type= "submit" value= "pic of self"/><br></br><br></br>
-
-
-
-
-
-            <label>Make:</label><br></br>
+		<Wrapper>
+			<Container>
+                <h2>Enter Your Truck Info:</h2>
+								<div class="card border-success mb-3">
+								<div class="card-body">
+								<form>
+								<div className="form-group">
+<label>Make:</label><br></br>
                 <InputArea onChange={(e) => setMake(e.target.value)} type="text" placeholder="Make?" /><br></br>
             <label>Model:</label><br></br>
                 <InputArea onChange={(e) => setModel(e.target.value)} type="text" placeholder="Model?"/><br></br>
@@ -63,12 +62,20 @@ function TruckInfo() {
             <label>Weight Capacity:</label><br></br>
                 <InputArea onChange={(e) => setPayload(e.target.value)} type="text" placeholder="Payload?"/><br></br>
             <label>Bed:</label><br></br>
-                <InputArea onChange={(e) => setBed(e.target.value)} type="text" placeholder="Bed size?"/><br></br><br></br>
+                <InputArea onChange={(e) => setBed(e.target.value)} type="text" placeholder="Bed size?"/>
 
-                <button onClick= {submitTruck}>Submit!</button>
+                <button type="button" class="btn btn-success" onClick= {submitTruck}>Submit!</button>
+								</div>
+								</form>
+								</div>
+								</div>
+ 
+	
+		
 
-      </div>  
-
+            
+			</Container>
+		</Wrapper>
     );
   }
 

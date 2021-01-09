@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import {PlacesAutocomplete,
   geocodeByAddress,
@@ -60,10 +58,9 @@ class StartingLocation extends React.Component {
             );
           })}
           </div>
-          </div>
+					</div>
         )}
-        </PlacesAutocomplete>
-
+      </PlacesAutocomplete>
     );
   }
 };
