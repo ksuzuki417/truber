@@ -27,14 +27,7 @@ const Schema = mongoose.Schema;
         });
       });
     });
-  // Hooks are automatic methods that run during various phases of the User Model lifecycle
-  // In this case, before a User is created, we will automatically hash their password
-    // userSchema.methods.comparePassword = function(candidatePassword, cb) {
-    //   bcrypt.compare(candidatePassword, this.password, function(err, isMatch){
-    //     if (err) return cb(err);
-    //     cb(null, isMatch);
-    //   });
-    // };  
+ 
     userSchema.methods.comparePassword = function(password){
       return bcrypt.compare(password,this.password)
     }
