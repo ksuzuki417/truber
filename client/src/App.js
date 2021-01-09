@@ -5,7 +5,7 @@ import Signup from "./Pages/SignUp";
 import Homepage from "./Pages/HomePage";
 import TruckCard from "./Pages/TruckSearch/index";
 import BookTruck from "./Pages/BookingPage/index";
-import TruckInfo from "./Pages/truckinfo";
+import TruckInfo from "./Pages/Truckinfo";
 import RequestBooking from "./Pages/Booking";
 import AuthPage from "./Pages/AuthenticatePage"
 
