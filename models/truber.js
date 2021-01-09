@@ -9,7 +9,7 @@ const trucksSchema = new Schema({
 	seats: {type: Number},
 	payload: {type: String},
 	startingLocation: {type: String,required: true},
-	destinationLocation: {type: String,required: true},
+	destinationLocation: {type: String},
 	bed: {type: String}
 });
 
