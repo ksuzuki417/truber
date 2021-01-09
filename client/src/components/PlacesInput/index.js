@@ -1,5 +1,5 @@
 import React from 'react';
-import PlacesAutocomplete, {
+import {PlacesAutocomplete,
   geocodeByAddress,
   getLatLng,
 } from 'react-places-autocomplete';

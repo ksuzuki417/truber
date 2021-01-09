@@ -2,7 +2,7 @@ import React from "react";
 
 function InputArea(props) {
 	return (
-		<input {...props}></input>
+		<input type="text" className="form-control" {...props}></input>
   );
 }
 

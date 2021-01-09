@@ -4,7 +4,7 @@ import Wrapper from "../../components/Wrapper/Wrapper"
 import StartingLocation from "../../components/PlacesInput";
 import DestinationLocation from "../../components/PlacesInput2"
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
-import "../../style.css"
+import "../../styles/style.css"
 
 const containerStyle = {  
   width: '75%',
@@ -12,13 +12,13 @@ const containerStyle = {
 };
 
 class MapContainer extends Component {
-	constructor(props) {
+    constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-	}
+    }
 
-	handleSubmit(event) {
-		console.log("working")
+    handleSubmit(event) {
+        console.log("working")
     event.preventDefault();
 	}
 	
@@ -52,7 +52,7 @@ class MapContainer extends Component {
 							<form onSubmit={this.handleSubmit}>
 								<StartingLocation></StartingLocation>
 								<DestinationLocation></DestinationLocation>
-								<button type="submit" value="Submit" className="btn btn-primary">Get Directions</button>
+								<button type="submit" value="Submit" className="btn btn-success" >Get Directions</button>
 							</form>
 						</div>
 					</div>

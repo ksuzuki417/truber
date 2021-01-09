@@ -1,74 +1,64 @@
-/*question text*/
+/*Including padding and border in the total width and height of the elements.*/
+* {
+	box-sizing: border-box;
+}
+
 body {
-	margin-bottom: 250px;
-	color: black;
-	font: 90% Roboto, Arial, sans-serif;
-	font-weight: 300;
-	padding: 0px;
-	line-height: 1.8;
-	height: auto;
+	background-color: whitesmoke;
+}
+button {
+	margin: 10px;
 }
 
-.selector {
-    background-image: linear-gradient(white, black);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;  /* <- here it is */
-  
-    width: 100px;
-    height: 100px;
-  }
-
-/*header stuff*/
-div#header h1 {
-	position: relative;
-	height: 80px;
-	line-height: 80px;
-	margin: 0;
-	padding-left: 10px;
-	background: #e0e0e0;
-	color: #292929;
+input {
+	margin: 20px;
+}
+/*Google fonts and styling for header, paragraph, list & label elements*/
+h1 {
+	font-family: 'Coda', cursive;
+	font-size: 100px;
+	text-align: center;
 }
 
-
-div#availability {
-	background: #a4bcc4;
-	float: left;
-	width: 150px;
-	margin-left: -150px;
+h2 {
+	font-family: 'Coda', cursive;
+	font-size: 55px;
+	text-align: center;
 }
 
-div#ratings {
-	
-	background: #147FA9;
-	float: left;
-	width: 150px;
-	margin-left: -700px;
+p {
+	font-family: 'Coda', cursive;
+	font-size: 25px;
+	margin-bottom: 10px;
 }
 
-
-div#footer {
-	background: #1f222b;
-	color: #fff;
-	padding: 20px 10px;
-	clear: left;
-	width: 100%;
+li {
+	font-family: 'Coda', cursive;
+	font-size: 25px;
 }
 
-div#container {
-	width: 700px;
-	margin: 0 auto;
-	height: 100%;
-	
+label {
+	font-family: 'Coda', cursive;
+	font-size: 25px;
 }
 
-div#info {
-	float: left;
-	width: 100%;
+/*Adding space underneath submit button on form*/
+form {
+	padding-bottom: 15px;
 }
-/*truck information*/
-div#content {
-	
-	margin: 0 150px;
-	height: 100%;
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Media Queries*/
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+	/*Formatting to reduce container size for visible side margins*/
+	.container {
+		width: 75%;
+	}
 }
