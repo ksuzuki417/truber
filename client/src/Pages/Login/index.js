@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import axios from "axios";
-//import "./style.css";
-
+import "../../styles/style.css"
+import Wrapper from "../../components/Wrapper/Wrapper";
+import Container from "../../components/Container/Container";
+import InputArea from '../../components/Input';
 
 class Login extends Component{
-    
-confimation (event) {
+  confimation (event) {
     event.preventDefault()
     const data = {
         'email': this.loginName.value,
@@ -21,23 +22,31 @@ confimation (event) {
         alert("Could not creat account. Please try again");
     });
 }
-    render() {
+  render() {
     return (
-            <div className="card">
-                <div className="card-body">
-                    <header className="card-title">TrUber Log In</header>
-                    <form onSubmit= {this.confimation.bind(this)}>
-                    <p className="card-text">Email:</p>
-                    <input type="text" ref = {node => this.loginName = node} class="form-control" placeholder="Email"></input>
-                    <p>Password:</p>
-                    <input type="password" ref = {node => this.loginPassword = node} class="form-control" placeholder="Password"></input>
-                    <input type= "submit" value= "Login!"/>
-                    <br></br>
-                   </form> 
-                    
-
-                </div>
-            </div>
+			<Wrapper>
+				<Container>
+				<h2>Login</h2>
+								<div class="card border-success mb-3 ">
+  <div class="card-body">
+	<form onSubmit= {this.confimation.bind(this)}>
+		<div className="form-group">
+			<label>Email:</label><br>
+			</br>
+                <InputArea ref = {node => this.loginName = node} type="text" className="SignUp" placeHolder="Email"/>
+								<br></br>
+								<label>Password:</label><br></br>
+                <InputArea ref = {node => this.loginPassword = node} type="password" className="SignUp" placeHolder="Password"/>
+								<br>
+								</br>
+								<input type="radio" className="btn-check"></input>
+                <label className="btn btn-success">Login</label>
+		</div>
+        </form>
+  </div>
+</div>
+				</Container>
+			</Wrapper>  
     )
 }
 }

@@ -1,0 +1,59 @@
+/*Including padding and border in the total width and height of the elements.*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: whitesmoke;
+}
+button {
+	margin: 10px;
+}
+
+input {
+	margin: 20px;
+}
+/*Google fonts and styling for header, paragraph, list & label elements*/
+h1 {
+	font-family: 'Coda', cursive;
+	font-size: 100px;
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Coda', cursive;
+	font-size: 55px;
+	text-align: center;
+}
+
+p {
+	font-family: 'Coda', cursive;
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+li {
+	font-family: 'Coda', cursive;
+	font-size: 25px;
+}
+
+label {
+	font-family: 'Coda', cursive;
+	font-size: 25px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Media Queries*/
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+
+	/*Formatting to reduce container size for visible side margins*/
+	.container {
+		width: 75%;
+	}
+}

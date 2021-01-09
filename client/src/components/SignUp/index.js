@@ -3,13 +3,7 @@ import "./style.css";
 
 
 function SignUp() {
-
-
-
-
-
-
-    return (
+	return (
             <div className="card">
                 <div className="card-body">
                 <header className="card-title">TrUber Sign UP</header>
@@ -30,7 +24,7 @@ function SignUp() {
                     <input type="radio" id="needsTruck" name="status" value="hasTruck"></input>
                     <label for="hasTruck">Has Truck</label>
                     <br></br>
-                    <button>Sign UP!</button>
+                    <button type="button" class="btn btn-success">Sign UP!</button>
             </div>
             </div>
     )
