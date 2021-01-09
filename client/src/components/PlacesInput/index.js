@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import PlacesAutocomplete, {
+import {PlacesAutocomplete,
   geocodeByAddress,
   getLatLng,
 } from 'react-places-autocomplete';
@@ -62,7 +62,7 @@ class StartingLocation extends React.Component {
           </div>
           </div>
         )}
-      </PlacesAutocomplete>
+        </PlacesAutocomplete>
 
     );
   }

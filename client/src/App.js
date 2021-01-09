@@ -6,9 +6,10 @@ import Signup from "./Pages/SignUp";
 import Homepage from "./Pages/HomePage";
 import Header from "./components/Header/index";
 import TruckCard from "./Pages/TruckSearch/index";
-import BookTruck from "./Pages/BookingPage";
-import TruckInfo from "./Pages/TruckInfo";
+import BookTruck from "./Pages/BookingPage/index";
+import TruckInfo from "./Pages/Truckinfo";
 import RequestBooking from "./Pages/Booking";
+import AuthPage from "./Pages/AuthenticatePage"
 import "./index.css";
 
 function App() {
@@ -23,8 +24,9 @@ function App() {
           <Route exact path={["/client"]}>
           <TruckCard/>
           </Route>
-          <Route path="/bookingPage" component= {BookTruck} />
+          <Route exact path="/bookingPage" component= {BookTruck} />
 				  <Route path="/truckprofile" component= {RequestBooking} />
+          <Route path="/authenticated" component= {AuthPage} />
         </Switch>
     </Router>
   );
