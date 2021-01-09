@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from "axios";
 //import "./style.css";
-//import Input from "../../components/Input";
 
 
 class Login extends Component{
@@ -9,19 +8,18 @@ class Login extends Component{
 confirmation (event) {
     event.preventDefault()
     const data = {
-        'name': this.loginName.value,
+        'email': this.loginName.value,
         'password': this.loginPassword.value,
     }
-  axios({
-        type: "POST",
-        url: "http://localhost:3000/confirmUser",
-        data: data,
-        crossDomain: true,
-        success: function(result){
-            console.log("result", result)
-        },
-        error: function (err) {alert("invalid info")}
+    axios
+    .post("/api/login/" + this.loginName.value, data)
+    .then(function () {
+        alert("Account created successfully");
+        window.location.reload();
     })
+    .catch(function () {
+        alert("Could not creat account. Please try again");
+    });
 }
     render() {
     return (
@@ -32,10 +30,10 @@ confirmation (event) {
                     <p className="card-text">Email:</p>
                     <input type="text" ref = {node => this.loginName = node} className="form-control" placeholder="Email"></input>
                     <p>Password:</p>
-                    <input type="text" ref = {node => this.loginPassword = node} className="form-control" placeholder="Password"></input>
+                    <input type="password" ref = {node => this.loginPassword = node} className="form-control" placeholder="Password"></input>
                     <input type= "submit" value= "Login!"/>
                     <br></br>
-                    </form>
+                   </form> 
                     
 
                 </div>
