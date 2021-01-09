@@ -2,7 +2,7 @@ import React from "react";
 
 export function SubmitBtn (props) {
     return (
-<button className="submit-btn" {...props} role="button">Submit</button>
+<button className="submit-btn" {...props}>Submit</button>
     );
 }
 

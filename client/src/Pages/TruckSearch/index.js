@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import API from "../../utils/API"
+import API from "../../utils/API";
 import Container from "../../components/Container/Container";
-import { Card, CardItem } from "../../components/TruckCard";
+import { Card } from "../../components/TruckCard";
 
 function TruckCard() {
 
@@ -26,22 +26,23 @@ function TruckCard() {
 
     return(
         <Container>
-            <Card>
                 {trucks.map(truck => {
-                    return (
-                        <CardItem>
-                            <img src="..." className="card-img" alt="..."/>
+                    return (            
+                    <Card>
+                            {<img src={truck.image} className="card-img" alt="..."/>}
                             <strong>Make:</strong> {truck.make}
                             <strong>Model:</strong> {truck.model}
                             <strong>Location:</strong> {truck.location}
                             <strong>Rate:</strong> {truck.rate}
-                        </CardItem>
+
+                        <button onClick= {handleBookingclick} type="submit" className="btn btn-primary">Book This Truck!</button>
+
+                                    </Card>
+
                     )
                 })}
-            </Card>
 
 
-            <button onClick= {handleBookingclick} type="submit" class="btn btn-primary">Book This Truck!</button>
         </Container>
         
     )
