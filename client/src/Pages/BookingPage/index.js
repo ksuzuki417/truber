@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Container from "../../components/Container/Container";
 import Wrapper from "../../components/Wrapper/Wrapper"
-import StartingLocation from "../../components/PlacesInput";
-import DestinationLocation from "../../components/PlacesInput2"
+// import StartingLocation from "../../components/PlacesInput";
+// import DestinationLocation from "../../components/PlacesInput2"
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
 import "../../styles/style.css"
 

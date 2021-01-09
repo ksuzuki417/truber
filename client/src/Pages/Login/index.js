@@ -1,26 +1,35 @@
 import React, {Component} from 'react';
-import axios from "axios";
-import "../../styles/style.css"
+//import axios from "axios";
+import { useHistory } from "react-router-dom";
 import Wrapper from "../../components/Wrapper/Wrapper";
+import InputArea from "../../components/Input";
 import Container from "../../components/Container/Container";
-import InputArea from '../../components/Input';
+//import "./style.css";
+
 
 class Login extends Component{
-  confimation (event) {
-    event.preventDefault()
-    const data = {
-        'email': this.loginName.value,
-        'password': this.loginPassword.value,
-    }
-    axios
-    .post("/api/login/" + this.loginName.value, data)
-    .then(function () {
-        alert("Account created successfully");
-        window.location.reload();
-    })
-    .catch(function () {
-        alert("Could not creat account. Please try again");
-    });
+
+  
+    
+confimation (event) {
+    // event.preventDefault()
+    // const data = {
+    //     'email': this.loginName.value,
+    //     'password': this.loginPassword.value,
+    // }
+    // axios
+    // .post("/api/login/" + this.loginName.value, data)
+    // .then(function () {
+    //     alert("Account created successfully");
+    //     window.location.reload();
+    // })
+    // .catch(function () {
+    //     alert("Could not creat account. Please try again");
+    //     navigateLoggedIn()
+    // });
+    const history = useHistory();
+    const navigateLoggedIn = () => history.push("/authenticated");
+    navigateLoggedIn();
 }
   render() {
     return (
