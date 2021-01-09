@@ -43,8 +43,8 @@ class MapContainer extends Component {
 					<div className="col-md-6">
 						<div className="card-body">
 							<form onSubmit={this.handleSubmit}>
-								{/* <StartingLocation></StartingLocation>
-								<DestinationLocation></DestinationLocation> */}
+								<StartingLocation></StartingLocation>
+								<DestinationLocation></DestinationLocation>
 								<button type="submit" value="Submit" className="btn btn-success" >Get Directions</button>
 							</form>
 						</div>
