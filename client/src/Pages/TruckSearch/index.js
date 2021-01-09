@@ -32,7 +32,7 @@ function TruckCard() {
                 {trucks.map(truck => {
                     return (            
                     <Card>
-                            {<img src={truck.image} className="card-img" alt="..."/>}
+                            {/* {<img src={truck.image} className="card-img" alt="..."/>} */}
                             <strong>Make:</strong> {truck.make}
                             <strong>Model:</strong> {truck.model}
                             <strong>Location:</strong> {truck.location}
