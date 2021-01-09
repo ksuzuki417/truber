@@ -6,7 +6,7 @@ import axios from "axios";
 
 class Login extends Component{
     
-confimation (event) {
+confirmation (event) {
     event.preventDefault()
     const data = {
         'name': this.loginName.value,
@@ -28,11 +28,11 @@ confimation (event) {
             <div className="card">
                 <div className="card-body">
                     <header className="card-title">TrUber Log In</header>
-                    <form onSubmit= {this.confimation.bind(this)}>
+                    <form onSubmit= {this.confirmation.bind(this)}>
                     <p className="card-text">Email:</p>
-                    <input type="text" ref = {node => this.loginName = node} class="form-control" placeholder="Email"></input>
+                    <input type="text" ref = {node => this.loginName = node} className="form-control" placeholder="Email"></input>
                     <p>Password:</p>
-                    <input type="text" ref = {node => this.loginPassword = node} class="form-control" placeholder="Password"></input>
+                    <input type="text" ref = {node => this.loginPassword = node} className="form-control" placeholder="Password"></input>
                     <input type= "submit" value= "Login!"/>
                     <br></br>
                     </form>
