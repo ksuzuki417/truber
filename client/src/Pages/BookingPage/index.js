@@ -26,12 +26,7 @@ class MapContainer extends Component {
 		return(
 		<Wrapper>
 			<Container>
-			<div className="card mb-3">
-				<div className="row no-gutters">
-					<div className="col-md-2">
-						<img src="..." className="card-img" alt="..."/>
-					</div>
-					<div className="col-md-6">
+			<div className="card">
 						<div className="card-body">
 							<h5 className="card-title">Owner Info:{this.props.owner}</h5>
 							<p className="card-text">Make:{this.props.make}</p>
@@ -42,8 +37,6 @@ class MapContainer extends Component {
 							<p className="card-text">Number of Seats:{this.props.seats}</p>
 							<p className="card-text">Rate:{this.props.rate}</p>
 						</div>
-					</div>
-				</div>
 			</div>
 			<div className="card mb-3">
 				<div className="row no-gutters">

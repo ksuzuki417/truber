@@ -62,7 +62,7 @@ function TruckInfo() {
             <label>Weight Capacity:</label><br></br>
                 <InputArea onChange={(e) => setPayload(e.target.value)} type="text" placeholder="Payload?"/><br></br>
             <label>Bed:</label><br></br>
-                <InputArea onChange={(e) => setBed(e.target.value)} type="text" placeholder="Bed size?"/><br></br><br></br>
+                <InputArea onChange={(e) => setBed(e.target.value)} type="text" placeholder="Bed size?"/>
 
                 <button type="button" class="btn btn-success" onClick= {submitTruck}>Submit!</button>
 								</div>

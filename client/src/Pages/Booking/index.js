@@ -16,10 +16,13 @@ function RequestBooking() {
 	return (
 		<Wrapper>
 			<Container>
-			<div>
-      <AcceptBtn onClick={handleAcceptBtn}/>,
+			<h2>Booking Requests:</h2>
+				<div class="card border-success mb-3">
+				<div class="card-body text-center">
+				<AcceptBtn onClick={handleAcceptBtn}/>
       <DeclineBtn onClick={handleDeclineBtn}/>
-    </div>
+				</div>
+				</div>
 			</Container>
 		</Wrapper>
     

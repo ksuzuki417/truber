@@ -15,15 +15,15 @@ function AuthPage() {
         return (
 				<Wrapper>
 					<Container>
-					<div>
-        <h1>What do you want to do?</h1>
+        <h2>What do you want to do?</h2>
+				<div class="card border-success mb-3">
+				<div class="card-body text-center">
+				<button type="button" class="btn btn-success" id="hasTruck" onClick= {navigateTruck}>Supply Truck</button>
+				<button type="button" class="btn btn-success" id="needsTruck" onClick= {navigateClient}>Request Truck</button>
+				</div>
+				</div>
+  
         
-            <input type="radio" className="btn-check" ></input>
-                <label className="btn btn-outline-primary" onClick={navigateTruck} id="hasTruck"for="btnradio2">Supply Truck</label>
-            <input type="radio" className="btn-check"></input>
-                <label className="btn btn-outline-primary"  onClick={navigateClient}  id="needsTruck" for="btnradio2">Truck Request</label> 
-
-     </div>
 					</Container>
 
 				</Wrapper>

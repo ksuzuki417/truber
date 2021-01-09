@@ -42,11 +42,6 @@ label {
 	font-size: 25px;
 }
 
-/*Adding space underneath submit button on form*/
-form {
-	padding-bottom: 15px;
-}
-
 .center {
   display: block;
   margin-left: auto;
