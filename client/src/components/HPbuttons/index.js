@@ -1,12 +1,12 @@
 import React from "react";
 
 export function SignUpBtn (props) {
-    return (
-        <button {...props}>Sign Up</button>
-    )
+  return (
+    <button type="button" class="btn btn-success" {...props}>Sign Up</button>
+  );
 }
 export function LoginBtn (props) {
-    return (
-        <button {...props}>Login</button>
-    )
+  return (
+    <button type="button" class="btn btn-success" {...props}>Login</button>
+  );
 }
