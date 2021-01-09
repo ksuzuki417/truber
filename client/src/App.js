@@ -5,7 +5,7 @@ import Signup from "./Pages/SignUp";
 import Homepage from "./Pages/HomePage";
 import TruckCard from "./Pages/TruckSearch/index";
 import BookTruck from "./Pages/BookingPage/index";
-import TruckInfo from "./Pages/Truckinfo";
+import TruckInfo from "./Pages/truckinfo";
 import RequestBooking from "./Pages/Booking";
 import AuthPage from "./Pages/AuthenticatePage"
 
@@ -16,7 +16,7 @@ function App() {
         <Route exact path="/" component= {Homepage} />
           <Route path="/signup" component= {Signup} />
           <Route path="/login" component= {Login} />
-          <Route path="/truckInfo" component= {TruckInfo} />
+          <Route path="/truckinfo" component= {TruckInfo} />
           <Route path="/client" component = {TruckCard} />
           <Route exact path="/bookingPage" component= {BookTruck} />
 				  <Route path="/truckprofile" component= {RequestBooking} />
