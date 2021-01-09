@@ -19,7 +19,7 @@ function TruckInfo() {
     function submitTruck() {
        
         axios
-            .post("/api/registerTruber/" + Make, {
+            .post("/api/registerTruber/", {
                 make: Make,
                 model: Model,
                 startingLocation: Location,
