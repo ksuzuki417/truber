@@ -17,9 +17,7 @@ function App() {
           <Route path="/signup" component= {Signup} />
           <Route path="/login" component= {Login} />
           <Route path="/truckInfo" component= {TruckInfo} />
-          <Route exact path={["/client"]}>
-          <TruckCard/>
-          </Route>
+          <Route path="/client" component = {TruckCard} />
           <Route exact path="/bookingPage" component= {BookTruck} />
 				  <Route path="/truckprofile" component= {RequestBooking} />
           <Route path="/authenticated" component= {AuthPage} />
