@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Container from "../../components/Container/Container";
 import Wrapper from "../../components/Wrapper/Wrapper"
-import StartingLocation from "../../components/PlacesInput";
-import DestinationLocation from "../../components/PlacesInput2"
+// import StartingLocation from "../../components/PlacesInput";
+// import DestinationLocation from "../../components/PlacesInput2"
 import { Map, GoogleApiWrapper } from 'google-maps-react'
 
 const containerStyle = {  
@@ -49,8 +49,8 @@ class MapContainer extends Component {
         <div className="col-md-6">
         <div className="card-body">
             <form onSubmit={this.handleSubmit}>
-            <StartingLocation></StartingLocation>
-<DestinationLocation></DestinationLocation>
+            {/* <StartingLocation></StartingLocation>
+<DestinationLocation></DestinationLocation> */}
 <button type="submit" value="Submit" className="btn btn-primary">Get Directions</button>
             </form>
         </div>
