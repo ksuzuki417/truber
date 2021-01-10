@@ -26,7 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 mongoose.connect(
-  process.env.MONGODB_URI,
+  process.env.MONGODB_URI || 'mongodb://localhost/Truber',
     { useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
