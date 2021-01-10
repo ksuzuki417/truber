@@ -18,7 +18,7 @@ function App() {
           <Route path="/login" component= {Login} />
           <Route path="/truckinfo" component= {TruckInfo} />
           <Route path="/client" component = {TruckCard} />
-          <Route exact path="/bookingPage" component= {BookTruck} />
+          <Route path="/bookingPage" component= {BookTruck} />
 				  <Route path="/truckprofile" component= {RequestBooking} />
           <Route path="/authenticated" component= {AuthPage} />
         </Switch>
